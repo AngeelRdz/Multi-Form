@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulario de Actividades</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="info">
+          <h1>Formulario de Actividades</h1>
+        </div>
+
+        <div class="col-md-12">
+          <form class="steps" method="post" id='signin' name="signin" action="registrar_info.php" enctype="multipart/form-data">
+            <ul id="progressbar">
+              <li class="active">Información Personal/Empresa</li>
+              <li>Información de la Actividad</li>
+              <li>Descripción de la Actividad</li>
+              <li>Servicios que incluye</li>
+              <li>Fotos</li>
+            </ul>
+
+            <!-- Información Personal -->
+            <fieldset>
+              <br>
+              <h2 class="fs-title">Información Personal/Empresa</h2>
+              <h3 class="fs-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+              <br>
+              <!-- Begin What's Your First Name Field -->
+              <div class="hs_firstname field hs-form-field col-md-6">
+                <label for="nombre_empresa">Nombre de la empresa *</label>
+                <input class="form-control input-sm" id="nombre_empresa" name="nombre_empresa" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye el nombre de la empresa" autocomplete="off">
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End What's Your First Name Field -->
+
+              <!-- Begin What's Your Email Field -->
+              <div class="hs_email field hs-form-field col-md-6">
+                <label for="giro_empresa">Giro de la empresa *</label>
+                <input class="form-control input-sm" id="giro_empresa" name="giro_empresa" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye el giro de la empresa." autocomplete="off">
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End What's Your Email Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
+                <label for="nombre_contacto">Nombre de contacto *</label>
+                <input class="form-control input-sm" id="nombre_contacto" name="nombre_contacto" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye el nombre de contacto" autocomplete="off">
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
+                <label for="apellido_contacto">Apellido de contacto *</label>
+                <input class="form-control input-sm" id="apellido_contacto" name="apellido_contacto" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye el apellido de contacto" autocomplete="off">
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
+                <label for="celular">Teléfono celular *</label>
+                <input class="form-control input-sm" id="celular" name="celular" required="required" type="text" value="" maxlength="12" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye el teléfono celular" autocomplete="off">
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
+                <label for="tel_oficina">Teléfono de oficina *</label>
+                <input class="form-control input-sm" id="tel_oficina" name="tel_oficina" required="required" type="text" value="" maxlength="25" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye el teléfono de oficina" autocomplete="off">
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
+                <label for="email">Email *</label>
+                <input class="form-control input-sm" id="email" name="email" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye el email" autocomplete="off">
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
+                <label for="pagina_web">Página web *</label>
+                <input class="form-control input-sm" id="pagina_web" name="pagina_web" required="required" type="text" value="" maxlength="100" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye tu página web" autocomplete="off">
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
+                <label for="ciudad">Ciudad *</label>
+                <input class="form-control input-sm" id="ciudad" name="ciudad" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye la ciudad" autocomplete="off">
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
+                <label for="pais">País *</label>
+                <select class="form-control input-sm" id="pais" name="pais" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye el país">
+                  <option value="">-- Selecciona --</option>
+                  <option value="Colombia">Colombia</option>
+                  <option value="Costa Rica">Costa Rica</option>
+                  <option value="Ecuador">Ecuador</option>
+                  <option value="Guatemala">Guatemala</option>
+                  <option value="México">México</option>
+                  <option value="Perú">Perú</option>
+                </select>
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
+                <label for="estado">Estado *</label>
+                <input class="form-control input-sm" id="estado" name="estado" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye el estado" autocomplete="off">
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
+                <label for="codigo_postal">Código Postal *</label>
+                <input class="form-control input-sm" id="codigo_postal" name="c_postal" required="required" type="text" value="" maxlength="7" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye el código postal" autocomplete="off">
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
+                <label for="direccion">Dirección *</label>
+                <input class="form-control input-sm" id="direccion" name="direccion" required="required" type="text" value="" maxlength="120" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye la dirección" autocomplete="off">
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
+                <label for="acerca">Acerca de mí *</label>
+                <textarea class="form-control" rows="5" id="acerca" name="acerca" required="required" type="text" value="" maxlength="250" placeholder="Hacer una pequeña descripción de ti, que demuestre que conoces perfectamente de este tipo de experiencias y que vas a ser el mejor anfitrión para ello..." data-rule-required="true" data-msg-required="Por favor, incluye el acerca de mi"></textarea>
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <input type="button" data-page="1" name="next" class="next action-button" value="Siguiente" />
+            </fieldset>
+            <!-- Fin Información Personal -->
+
+
+
+            <!-- ACQUISITION FIELD SET -->
+            <fieldset>
+              <h2 class="fs-title">Información de la Actividad</h2>
+              <h3 class="fs-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                <!-- Begin Total Number of Constituents in Your Database Field -->
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
+                  <label for="nombre_actividad">Nombre de la actividad *</label>
+                  <input class="form-control input-sm" id="nombre_actividad" name="nombre_actividad" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye el nombre de la actividad" autocomplete="off">
+                  <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <!-- End Total Number of Constituents in Your Database Field -->
+
+                <!-- Begin Total Number of Constituents in Your Database Field -->
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
+                  <label for="dias">Días disponibles *</label><br>
+                    <div class="col-md-6">
+                      <label for="lunes" class="checkbox-inline">
+                        <input id="lunes" name="lunes" type="checkbox" value="Lunes">Lunes
+                      </label>
+                      <label for="martes" class="checkbox-inline">
+                        <input id="martes" name="martes" type="checkbox" value="Martes">Martes
+                      </label>
+                      <label for="miercoles" class="checkbox-inline">
+                        <input id="miercoles" name="miercoles" type="checkbox" value="Miércoles">Miércoles
+                      </label>
+                      <label for="jueves" class="checkbox-inline">
+                        <input id="jueves" name="jueves" type="checkbox" value="Jueves">Jueves
+                      </label>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="viernes" class="checkbox-inline">
+                        <input id="viernes" name="viernes" type="checkbox" value="Viernes">Viernes
+                      </label>
+                      <label for="sabado" class="checkbox-inline">
+                        <input id="sabado" name="sabado" type="checkbox" value="Sábado">Sábado
+                      </label>
+                      <label for="domingo" class="checkbox-inline">
+                        <input id="domingo" name="domingo" type="checkbox" value="Domingo">Domingo
+                      </label>
+                      <label for="todos" class="checkbox-inline">
+                        <input id="todos" name="todos" type="checkbox" value="Todos">Todos
+                      </label>
+                    </div>
+                  <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <!-- End Total Number of Constituents in Your Database Field -->
+
+                <!-- Begin Total Number of Constituents in Your Database Field -->
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
+                  <label for="horario_disponible">Horarios disponibles *</label>
+                  <textarea class="form-control" rows="5" id="horario_disponible" name="horario_disponible" required="required" type="text" value="" maxlength="80" placeholder="Ingresa el horario de los días disponibles..." data-rule-required="true" data-msg-required="Por favor, incluye horario disponible"></textarea>
+                  <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <!-- End Total Number of Constituents in Your Database Field -->
+
+                <!-- Begin Total Number of Constituents in Your Database Field -->
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
+                  <label for="pais">Tipo de Actividad *</label>
+                  <select class="form-control input-sm" id="pais" name="pais" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye el país">
+                    <option value="">-- Selecciona --</option>
+                    <option value="Aventura">Aventura</option>
+                    <option value="Cultural">Cultural</option>
+                    <option value="Arqueolócia">Arqueolócia</option>
+                    <option value="Religiosa">Religiosa</option>
+                    <option value="Sol y playa">Sol y playa</option>
+                    <option value="Gastronómico">Gastronómico</option>
+                    <option value="Hipster">Hipster</option>
+                    <option value="LGBT">LGBT</option>
+                    <option value="Naturaleza">Naturaleza</option>
+                    <option value="Clases y talleres">Clases y talleres</option>
+                    <option value="Surf">Surf</option>
+                    <option value="Arte">Arte</option>
+                    <option value="Salud y bienestar">Salud y bienestar</option>
+                    <option value="Experiencias con fines solidarios">Experiencias con fines solidarios</option>
+                  </select>
+                  <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <!-- End Total Number of Constituents in Your Database Field -->
+
+                <!-- Begin Total Number of Constituents in Your Database Field -->
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
+                  <label for="adultas">¿Para cuántas personas adultas? *</label>
+                  <input class="form-control input-sm" id="adultas" name="adultas" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye las personas adultas" autocomplete="off">
+                  <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <!-- End Total Number of Constituents in Your Database Field -->
+
+                <!-- Begin Total Number of Constituents in Your Database Field -->
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
+                  <label for="ninos">¿Para cuántos niños? *</label>
+                  <input class="form-control input-sm" id="ninos" name="ninos" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye cuantos niños" autocomplete="off">
+                  <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <!-- End Total Number of Constituents in Your Database Field -->
+
+                <!-- Begin Total Number of Constituents in Your Database Field -->
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
+                  <label for="hombres">¿Para cuántos hombres? *</label>
+                  <input class="form-control input-sm" id="hombres" name="hombres" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye cuantos hombres" autocomplete="off">
+                  <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <!-- End Total Number of Constituents in Your Database Field -->
+
+                <!-- Begin Total Number of Constituents in Your Database Field -->
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
+                  <label for="mujeres">¿Para cuántas mujeres? *</label>
+                  <input class="form-control input-sm" id="mujeres" name="mujeres" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye cuantas mujeres" autocomplete="off">
+                  <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <!-- End Total Number of Constituents in Your Database Field -->
+
+                <!-- Begin Total Number of Constituents in Your Database Field -->
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
+                  <div class="col-md-12">
+                    <label for="duracion">Duración de la Actividad *</label>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="dias">Días: *</label>
+                    <input class="form-control input-sm" id="dias" name="dias" required="required" type="text" value="" maxlength="80" placeholder="Días" data-rule-required="true" data-msg-required="Incluye los días" autocomplete="off">
+                    <span class="error1" style="display: none;">
+                        <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="dias">Horas: *</label>
+                    <input class="form-control input-sm" id="horas" name="horas" required="required" type="text" value="" maxlength="80" placeholder="Horas" data-rule-required="true" data-msg-required="Incluye las horas" autocomplete="off">
+                    <span class="error1" style="display: none;">
+                        <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="dias">Minutos:: *</label>
+                    <input class="form-control input-sm" id="minutos" name="minutos" required="required" type="text" value="" maxlength="80" placeholder="Minutos" data-rule-required="true" data-msg-required="Incluye los minutos" autocomplete="off">
+                    <span class="error1" style="display: none;">
+                        <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                </div>
+                <!-- End Total Number of Constituents in Your Database Field -->
+
+                <!-- Begin Total Number of Constituents in Your Database Field -->
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
+                  <label for="disponible_ingles">¿Disponible en inglés? *</label>
+                  <select class="form-control input-sm" id="disponible_ingles" name="disponible_ingles" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye si esta disponible en inglés">
+                    <option value="">-- Selecciona --</option>
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                  </select>
+                  <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <!-- End Total Number of Constituents in Your Database Field -->
+
+                <!-- Begin Total Number of Constituents in Your Database Field -->
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
+                  <label for="forma_pago">Forma de pago*</label>
+                  <select class="form-control input-sm" id="forma_pago" name="forma_pago" required="required" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor, incluye la forma de pago">
+                    <option value="">-- Selecciona --</option>
+                    <option value="TC">TC</option>
+                    <option value="PayPal">PayPal</option>
+                    <option value="Mercado Pago">Mercado Pago</option>
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="Otro">Otro</option>
+                  </select>
+                  <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <!-- End Total Number of Constituents in Your Database Field -->
+
+                <!-- Begin Total Number of Constituents in Your Database Field -->
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
+                  <label for="precio">Precio de la actividad *</label>
+                  <textarea class="form-control" rows="5" id="precio" name="precio" required="required" type="text" value="" maxlength="80" placeholder="Describe como cobras ej. Por persona, por actividad, por recorrido, por día, etc..." data-rule-required="true" data-msg-required="Por favor, incluye el precio de la actividad"></textarea>
+                  <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <!-- End Total Number of Constituents in Your Database Field -->
+
+              <input type="button" data-page="2" name="previous" class="previous action-button" value="Anterior" />
+              <input type="button" data-page="2" name="next" class="next action-button" value="Siguiente" />
+            </fieldset>
+
+            <!-- Cultivation FIELD SET -->
+            <fieldset>
+              <h2 class="fs-title">Descripción de la Actividad</h2>
+              <h3 class="fs-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
+                <label for="descripcion_experiencia">Descripción de la experiencia *</label>
+                <textarea class="form-control" rows="5" id="descripcion_experiencia" name="descripcion_experiencia" required="required" type="text" value="" maxlength="250" placeholder="Describe perfectamente la experiencia..." data-rule-required="true" data-msg-required="Incluye la experiencia"></textarea>
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
+                <label for="servicios_acceso">¿A que otros servicios tienen acceso los contratantes? </label>
+                <textarea class="form-control" rows="5" id="servicios_acceso" name="servicios_acceso" type="text" value="" maxlength="250" placeholder="Opcional..."></textarea>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
+                <label for="acerca_lugar">Acerca del lugar *</label>
+                <textarea class="form-control" rows="5" id="acerca_lugar" name="acerca_lugar" required="required" type="text" value="" maxlength="250" placeholder="Describe el lugar donde se desarrolla la actividad, ejemplo, Zona de pantanos, zona montañosa, zona urbana con mucho tráfico, zona para caminar, etc...." data-rule-required="true" data-msg-required="Incluye descripción del lugar"></textarea>
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <input type="button" data-page="3" name="previous" class="previous action-button" value="Anterior" />
+              <input type="button" data-page="3" name="next" class="next action-button" value="Siguiente" />
+            </fieldset>
+
+            <!-- Cultivation2 FIELD SET -->
+            <fieldset>
+              <h2 class="fs-title">Servicios que incluye</h2>
+              <h3 class="fs-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
+                <label for="dias">Servicios *</label><br>
+                  <div class="col-md-6">
+                    <label for="agua" class="checkbox-inline">
+                      <input id="agua" name="agua" type="checkbox" value="Agua">Agua
+                    </label>
+                    <label for="cena" class="checkbox-inline">
+                      <input id="cena" name="cena" type="checkbox" value="Cena">Cena
+                    </label>
+                    <label for="bicicleta" class="checkbox-inline">
+                      <input id="bicicleta" name="bicicleta" type="checkbox" value="Bicicleta">Bicicleta
+                    </label>
+                    <label for="cena" class="checkbox-inline">
+                      <input id="cena" name="cena" type="checkbox" value="Cena">Cena
+                    </label>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="coctel" class="checkbox-inline">
+                      <input id="coctel" name="coctel" type="checkbox" value="Coctel">Coctel
+                    </label>
+                    <label for="comida" class="checkbox-inline">
+                      <input id="comida" name="comida" type="checkbox" value="Comida">Comida
+                    </label>
+                    <label for="desayuno" class="checkbox-inline">
+                      <input id="desayuno" name="desayuno" type="checkbox" value="Desayuno">Desayuno
+                    </label>
+                    <label for="entradas" class="checkbox-inline">
+                      <input id="entradas" name="entradas" type="checkbox" value="Entradas">Entradas
+                    </label>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="equipo" class="checkbox-inline">
+                      <input id="equipo" name="equipo" type="checkbox" value="Equipo">Equipo
+                    </label>
+                    <label for="refrescos" class="checkbox-inline">
+                      <input id="refrescos" name="refrescos" type="checkbox" value="Refrescos">Refrescos
+                    </label>
+                    <label for="snack" class="checkbox-inline">
+                      <input id="snack" name="snack" type="checkbox" value="Snack">Snack
+                    </label>
+                    <label for="tour" class="checkbox-inline">
+                      <input id="tour" name="tour" type="checkbox" value="Tour">Tour
+                    </label>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="transportacion" class="checkbox-inline">
+                      <input id="transportacion" name="transportacion" type="checkbox" value="Transportación">Transportación
+                    </label>
+                  </div>
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
+                <label for="incluye_servicio">¿Qué incluye el servicio? *</label>
+                <textarea class="form-control" rows="5" id="incluye_servicio" name="incluye_servicio" required="required" type="text" value="" maxlength="250" placeholder="Hacer una descripción de todo lo que incluye la experiencia para que las personas tengan un idea completa de lo que van a recibir por el precio -Es un complemento  al listado que incluye..." data-rule-required="true" data-msg-required="Incluye el servicio"></textarea>
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
+                <label for="durante_experiencia">¿Qué haremos durante la experiencia? *</label>
+                <textarea class="form-control" rows="5" id="durante_experiencia" name="durante_experiencia" required="required" type="text" value="" maxlength="250" placeholder="Hacer una descripción completa del servicio que vas a prestar para que las personas tengan una idea completa de lo que van a recibir y no tener sorpresas..." data-rule-required="true" data-msg-required="Incluye la experiencia"></textarea>
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
+                <label for="apuntarse">¿Quién puede apuntarse? *</label>
+                <textarea class="form-control" rows="5" id="apuntarse" name="apuntarse" required="required" type="text" value="" maxlength="250" placeholder="Hacer una descripción completa del tipo de personas que pueden inscribirse para participar en la experiencia turística, ser muy explícito en las características que deben tener las personas para que no hayan sorpresas..." data-rule-required="true" data-msg-required="Incluye"></textarea>
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
+                <label for="notas_adicionales">Notas adicionales *</label>
+                <textarea class="form-control" rows="5" id="notas_adicionales" name="notas_adicionales" required="required" type="text" value="" maxlength="250" placeholder="Si necesitas especificar algo adicional aquí lo puedes hacer" data-rule-required="true" data-msg-required="Incluye notas"></textarea>
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
+                <label for="politica">Política de cancelación *</label>
+                <textarea class="form-control" rows="5" id="politica" name="politica" required="required" type="text" value="" maxlength="250" placeholder="Escribe la política de cancelación" data-rule-required="true" data-msg-required="Incluye política"></textarea>
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <!-- End Total Number of Constituents in Your Database Field -->
+
+              <input type="button" data-page="4" name="previous" class="previous action-button" value="Anterior" />
+              <input type="button" data-page="4" name="next" class="next action-button" value="Siguiente" />
+            </fieldset>
+
+            <!-- RETENTION FIELD SET -->
+            <fieldset>
+              <h2 class="fs-title">Fotos de la Actividad</h2>
+              <h3 class="fs-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+              <!-- Begin Total Number of Constituents in Your Database Field -->
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
+                <label for="files">Sube tus fotos</label>
+                <input type="file" id="files" class="form-control" name="files[]" multiple required data-rule-required="true" data-msg-required="Por favor, incluye tus fotos">
+                <span class="error1" style="display: none;">
+                    <i class="error-log fa fa-exclamation-triangle"></i>
+                </span>
+                <!-- <div id="drop_zone"><br><center>Soltar archivo aquí</center></div><br> -->
+                <output id="list-miniatura" class="col-md-12"></output>
+              </div>
+              <br><br><br>
+              <!-- End Total Number of Constituents in Your Database Field -->
+              <input type="button" data-page="5" name="previous" class="previous action-button" value="Anterior" />
+              <input id="submit" class="hs-button primary large action-button next" type="submit" value="Guardar">
+            </fieldset>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function handleFileSelect(evt) {
+        var files = evt.target.files; // FileList object
+
+        // Loop through the FileList and render image files as thumbnails.
+        for (var i = 0, f; f = files[i]; i++) {
+
+          // Only process image files.
+          if (!f.type.match('image.*')) {
+            continue;
+          }
+
+          var reader = new FileReader();
+
+          // Closure to capture the file information.
+          reader.onload = (function(theFile) {
+            return function(e) {
+              // Render thumbnail.
+              var span = document.createElement('span');
+              span.innerHTML = ['<div class="col-md-3"><img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/><br><p class="texto_galeria">Nombre: <span class="sub_texto_galeria">', escape(theFile.name), '</span></p><p class="texto_galeria">Tamaño: <span class="sub_texto_galeria">', escape(theFile.size), ' bytes </span></p><p class="texto_galeria">Tipo: <span class="sub_texto_galeria">', escape(theFile.type), '</span></p><br><br></div>'].join('');
+              document.getElementById('list-miniatura').insertBefore(span, null);
+            };
+          })(f);
+
+          // Read in the image file as a data URL.
+          reader.readAsDataURL(f);
+        }
+      }
+
+      document.getElementById('files').addEventListener('change', handleFileSelect, false);
+    </script>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+    <script src='https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js'></script>
+
+    <script  src="js/index.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+
+</html>
