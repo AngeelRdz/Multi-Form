@@ -163,7 +163,7 @@
                               echo "
                                     <div class='col-md-3'>
                                       <img class='thumb' src='".$name_array[$i]."'><br>
-                                      <span class='span_texto_registrado'>$name_array[$i]</span><br>
+                                      <span class='span_texto_registrado'>$name_array[$i]</span><br><br>
                                     </div>
                                   ";
                           }
