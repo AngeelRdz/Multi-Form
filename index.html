@@ -212,30 +212,30 @@
                   <label for="dias">Días disponibles *</label><br>
                     <div class="col-md-6">
                       <label for="lunes" class="checkbox-inline">
-                        <input id="lunes" name="lunes" type="checkbox" value="Lunes">Lunes
+                        <input id="lunes" name="dias_disponibles" type="checkbox" value="Lunes">Lunes
                       </label>
                       <label for="martes" class="checkbox-inline">
-                        <input id="martes" name="martes" type="checkbox" value="Martes">Martes
+                        <input id="martes" name="dias_disponibles" type="checkbox" value="Martes">Martes
                       </label>
                       <label for="miercoles" class="checkbox-inline">
-                        <input id="miercoles" name="miercoles" type="checkbox" value="Miércoles">Miércoles
+                        <input id="miercoles" name="dias_disponibles" type="checkbox" value="Miércoles">Miércoles
                       </label>
                       <label for="jueves" class="checkbox-inline">
-                        <input id="jueves" name="jueves" type="checkbox" value="Jueves">Jueves
+                        <input id="jueves" name="dias_disponibles" type="checkbox" value="Jueves">Jueves
                       </label>
                     </div>
                     <div class="col-md-6">
                       <label for="viernes" class="checkbox-inline">
-                        <input id="viernes" name="viernes" type="checkbox" value="Viernes">Viernes
+                        <input id="viernes" name="dias_disponibles" type="checkbox" value="Viernes">Viernes
                       </label>
                       <label for="sabado" class="checkbox-inline">
-                        <input id="sabado" name="sabado" type="checkbox" value="Sábado">Sábado
+                        <input id="sabado" name="dias_disponibles" type="checkbox" value="Sábado">Sábado
                       </label>
                       <label for="domingo" class="checkbox-inline">
-                        <input id="domingo" name="domingo" type="checkbox" value="Domingo">Domingo
+                        <input id="domingo" name="dias_disponibles" type="checkbox" value="Domingo">Domingo
                       </label>
                       <label for="todos" class="checkbox-inline">
-                        <input id="todos" name="todos" type="checkbox" value="Todos">Todos
+                        <input id="todos" name="dias_disponibles" type="checkbox" value="Todos">Todos
                       </label>
                     </div>
                   <span class="error1" style="display: none;">
@@ -442,49 +442,49 @@
                 <label for="dias">Servicios *</label><br>
                   <div class="col-md-6">
                     <label for="agua" class="checkbox-inline">
-                      <input id="agua" name="agua" type="checkbox" value="Agua">Agua
+                      <input id="agua" name="servicios" type="checkbox" value="Agua">Agua
                     </label>
                     <label for="cena" class="checkbox-inline">
-                      <input id="cena" name="cena" type="checkbox" value="Cena">Cena
+                      <input id="cena" name="servicios" type="checkbox" value="Cena">Cena
                     </label>
                     <label for="bicicleta" class="checkbox-inline">
-                      <input id="bicicleta" name="bicicleta" type="checkbox" value="Bicicleta">Bicicleta
+                      <input id="bicicleta" name="servicios" type="checkbox" value="Bicicleta">Bicicleta
                     </label>
                     <label for="cena" class="checkbox-inline">
-                      <input id="cena" name="cena" type="checkbox" value="Cena">Cena
+                      <input id="cena" name="servicios" type="checkbox" value="Cena">Cena
                     </label>
                   </div>
                   <div class="col-md-6">
                     <label for="coctel" class="checkbox-inline">
-                      <input id="coctel" name="coctel" type="checkbox" value="Coctel">Coctel
+                      <input id="coctel" name="servicios" type="checkbox" value="Coctel">Coctel
                     </label>
                     <label for="comida" class="checkbox-inline">
-                      <input id="comida" name="comida" type="checkbox" value="Comida">Comida
+                      <input id="comida" name="servicios" type="checkbox" value="Comida">Comida
                     </label>
                     <label for="desayuno" class="checkbox-inline">
-                      <input id="desayuno" name="desayuno" type="checkbox" value="Desayuno">Desayuno
+                      <input id="desayuno" name="servicios" type="checkbox" value="Desayuno">Desayuno
                     </label>
                     <label for="entradas" class="checkbox-inline">
-                      <input id="entradas" name="entradas" type="checkbox" value="Entradas">Entradas
+                      <input id="entradas" name="servicios" type="checkbox" value="Entradas">Entradas
                     </label>
                   </div>
                   <div class="col-md-6">
                     <label for="equipo" class="checkbox-inline">
-                      <input id="equipo" name="equipo" type="checkbox" value="Equipo">Equipo
+                      <input id="equipo" name="servicios" type="checkbox" value="Equipo">Equipo
                     </label>
                     <label for="refrescos" class="checkbox-inline">
-                      <input id="refrescos" name="refrescos" type="checkbox" value="Refrescos">Refrescos
+                      <input id="refrescos" name="servicios" type="checkbox" value="Refrescos">Refrescos
                     </label>
                     <label for="snack" class="checkbox-inline">
-                      <input id="snack" name="snack" type="checkbox" value="Snack">Snack
+                      <input id="snack" name="servicios" type="checkbox" value="Snack">Snack
                     </label>
                     <label for="tour" class="checkbox-inline">
-                      <input id="tour" name="tour" type="checkbox" value="Tour">Tour
+                      <input id="tour" name="servicios" type="checkbox" value="Tour">Tour
                     </label>
                   </div>
                   <div class="col-md-6">
                     <label for="transportacion" class="checkbox-inline">
-                      <input id="transportacion" name="transportacion" type="checkbox" value="Transportación">Transportación
+                      <input id="transportacion" name="servicios" type="checkbox" value="Transportación">Transportación
                     </label>
                   </div>
                 <span class="error1" style="display: none;">
@@ -556,7 +556,7 @@
               <!-- Begin Total Number of Constituents in Your Database Field -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
                 <label for="files">Sube tus fotos</label>
-                <input type="file" id="files" class="form-control" name="files[]" multiple required data-rule-required="true" data-msg-required="Fotos es requerido">
+                <input type="file" id="files" class="form-control" name="files" multiple required data-rule-required="true" data-msg-required="Fotos es requerido">
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
