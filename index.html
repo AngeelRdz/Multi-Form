@@ -12,6 +12,19 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
+    <script src="lib/jquery-1.9.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/jquery.maskedinput.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            $.mask.definitions['~'] = "[+-]";
+            $(".phone").mask("(99) 99-99-99-99");
+            $("#phoneExt").mask("(99) 99-99-99-99 Ext. 9999");
+            $("#codigo_postal").mask("C.P. 99999");
+        });
+
+    </script>
+
   </head>
 
   <body>
@@ -43,7 +56,7 @@
               <!-- Nombre de la empresa -->
               <div class="hs_firstname field hs-form-field col-md-6">
                 <label for="nombre_empresa">Nombre de la empresa *</label>
-                <input class="form-control input-sm" id="nombre_empresa" name="nombre_empresa" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Nombre de la empresa es requerido" autocomplete="off">
+                <input class="form-control input-sm" id="nombre_empresa" name="nombre_empresa" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="1" data-rule-required="true" data-msg-required="Nombre de la empresa es requerido" autocomplete="off">
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -53,7 +66,7 @@
               <!-- Giro de la empresa -->
               <div class="hs_email field hs-form-field col-md-6">
                 <label for="giro_empresa">Giro de la empresa *</label>
-                <input class="form-control input-sm" id="giro_empresa" name="giro_empresa" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Giro de la empresa es requerido" autocomplete="off">
+                <input class="form-control input-sm" id="giro_empresa" name="giro_empresa" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="2" data-rule-required="true" data-msg-required="Giro de la empresa es requerido" autocomplete="off">
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -63,7 +76,7 @@
               <!-- Nombre de contacto -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
                 <label for="nombre_contacto">Nombre de contacto *</label>
-                <input class="form-control input-sm" id="nombre_contacto" name="nombre_contacto" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Nombre es requerido" autocomplete="off">
+                <input class="form-control input-sm" id="nombre_contacto" name="nombre_contacto" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="3" data-rule-required="true" data-msg-required="Nombre es requerido" autocomplete="off">
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -73,7 +86,7 @@
               <!-- Apellido de contacto -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
                 <label for="apellido_contacto">Apellido de contacto *</label>
-                <input class="form-control input-sm" id="apellido_contacto" name="apellido_contacto" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Apellido es requerido" autocomplete="off">
+                <input class="form-control input-sm" id="apellido_contacto" name="apellido_contacto" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="4" data-rule-required="true" data-msg-required="Apellido es requerido" autocomplete="off">
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -83,7 +96,7 @@
               <!-- BTeléfono celular -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
                 <label for="celular">Teléfono celular *</label>
-                <input class="form-control input-sm" id="celular" name="celular" required="required" type="text" value="" maxlength="12" placeholder="" data-rule-required="true" data-msg-required="Celular es requerido" autocomplete="off">
+                <input class="form-control input-sm phone" id="celular" name="celular" required="required" type="text" value="" maxlength="20" placeholder="(55) 99-99-99-99" tabindex="5" data-rule-required="true" data-msg-required="Celular es requerido" autocomplete="off">
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -93,7 +106,7 @@
               <!-- Teléfono de oficina -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
                 <label for="tel_oficina">Teléfono de oficina *</label>
-                <input class="form-control input-sm" id="tel_oficina" name="tel_oficina" required="required" type="text" value="" maxlength="25" placeholder="" data-rule-required="true" data-msg-required="Teléfono es requerido" autocomplete="off">
+                <input id="phoneExt" class="form-control input-sm" id="tel_oficina" name="tel_oficina" required="required" type="text" value="" maxlength="40" placeholder="(99) 99-99-99-99 Ext. 9999" tabindex="6" data-rule-required="true" data-msg-required="Teléfono es requerido" autocomplete="off">
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -103,7 +116,7 @@
               <!-- Email -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
                 <label for="email">Email *</label>
-                <input class="form-control input-sm" id="email" name="email" required="required" type="email" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Email es requerido" autocomplete="off">
+                <input class="form-control input-sm" id="email" name="email" required="required" type="email" value="" maxlength="80" placeholder="" tabindex="7" data-rule-required="true" data-msg-required="Email es requerido" autocomplete="off">
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -113,7 +126,7 @@
               <!-- Página web -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
                 <label for="pagina_web">Página web *</label>
-                <input class="form-control input-sm" id="pagina_web" name="pagina_web" required="required" type="text" value="" maxlength="100" placeholder="" data-rule-required="true" data-msg-required="Página Web es requerido" autocomplete="off">
+                <input class="form-control input-sm" id="pagina_web" name="pagina_web" required="required" type="text" value="" maxlength="100" placeholder="" tabindex="8" data-rule-required="true" data-msg-required="Página Web es requerido" autocomplete="off">
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -123,7 +136,7 @@
               <!-- Ciudad -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
                 <label for="ciudad">Ciudad *</label>
-                <input class="form-control input-sm" id="ciudad" name="ciudad" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Ciudad es requerido" autocomplete="off">
+                <input class="form-control input-sm" id="ciudad" name="ciudad" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="9" data-rule-required="true" data-msg-required="Ciudad es requerido" autocomplete="off">
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -133,7 +146,7 @@
               <!-- País -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
                 <label for="pais">País *</label>
-                <select class="form-control input-sm" id="pais" name="pais" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="País es requerido">
+                <select class="form-control input-sm" id="pais" name="pais" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="10" data-rule-required="true" data-msg-required="País es requerido">
                   <option value="">-- Selecciona --</option>
                   <option value="Colombia">Colombia</option>
                   <option value="Costa Rica">Costa Rica</option>
@@ -151,7 +164,7 @@
               <!-- Estado -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
                 <label for="estado">Estado *</label>
-                <input class="form-control input-sm" id="estado" name="estado" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Estado es requerido" autocomplete="off">
+                <input class="form-control input-sm" id="estado" name="estado" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="11" data-rule-required="true" data-msg-required="Estado es requerido" autocomplete="off">
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -162,7 +175,7 @@
               <!-- Código postal -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
                 <label for="codigo_postal">Código Postal *</label>
-                <input class="form-control input-sm" id="codigo_postal" name="codigo_postal" required="required" type="text" value="" maxlength="7" placeholder="" data-rule-required="true" data-msg-required="Código postal es requerido" autocomplete="off">
+                <input class="form-control input-sm" id="codigo_postal" name="codigo_postal" required="required" type="text" value="" maxlength="15" placeholder="C.P. 99999" tabindex="12" data-rule-required="true" data-msg-required="Código postal es requerido" autocomplete="off">
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -172,7 +185,7 @@
               <!-- Dirección -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
                 <label for="direccion">Dirección *</label>
-                <input class="form-control input-sm" id="direccion" name="direccion" required="required" type="text" value="" maxlength="120" placeholder="" data-rule-required="true" data-msg-required="Dirección es requerido" autocomplete="off">
+                <input class="form-control input-sm" id="direccion" name="direccion" required="required" type="text" value="" maxlength="120" placeholder="" tabindex="13" data-rule-required="true" data-msg-required="Dirección es requerido" autocomplete="off">
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -182,7 +195,7 @@
               <!-- Acerca de mí -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
                 <label for="acerca">Acerca de mí *</label>
-                <textarea class="form-control" rows="5" id="acerca" name="acerca" required="required" type="text" value="" maxlength="250" placeholder="Hacer una pequeña descripción de ti, que demuestre que conoces perfectamente de este tipo de experiencias y que vas a ser el mejor anfitrión para ello..." data-rule-required="true" data-msg-required="Acerca de mi es requerido"></textarea>
+                <textarea class="form-control" rows="5" id="acerca" name="acerca" required="required" type="text" value="" maxlength="250" placeholder="Hacer una pequeña descripción de ti, que demuestre que conoces perfectamente de este tipo de experiencias y que vas a ser el mejor anfitrión para ello..." tabindex="14" data-rule-required="true" data-msg-required="Acerca de mi es requerido"></textarea>
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -194,8 +207,6 @@
             </fieldset>
             <!-- End Información Personal -->
 
-
-
             <!-- Información de la Actividad -->
             <fieldset>
               <h2 class="fs-title">Información de la Actividad</h2>
@@ -203,7 +214,7 @@
                 <!-- Nombre de la actividad -->
                 <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
                   <label for="nombre_actividad">Nombre de la actividad *</label>
-                  <input class="form-control input-sm" id="nombre_actividad" name="nombre_actividad" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Nombre de la actividad es requerido" autocomplete="off">
+                  <input class="form-control input-sm" id="nombre_actividad" name="nombre_actividad" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="1" data-rule-required="true" data-msg-required="Nombre de la actividad es requerido" autocomplete="off">
                   <span class="error1" style="display: none;">
                       <i class="error-log fa fa-exclamation-triangle"></i>
                   </span>
@@ -212,45 +223,43 @@
 
                 <!-- Días disponibles -->
                 <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
-                	<label for="dias">Días disponibles *</label><br>
-                		<div class="col-md-6">
-                			<label class="checkbox-inline">
-                				<input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Lunes">Lunes
-                			</label>
-                			<label class="checkbox-inline">
-                				<input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Martes">Martes
-                			</label>
-                			<label class="checkbox-inline">
-                				<input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Miércoles">Miércoles
-                			</label>
-                			<label class="checkbox-inline">
-                				<input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Jueves">Jueves
-                			</label>
-                		</div>
-                		<div class="col-md-6">
-                			<label class="checkbox-inline">
-                				<input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Viernes">Viernes
-                			</label>
-                			<label class="checkbox-inline">
-                				<input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Sábado">Sábado
-                			</label>
-                			<label class="checkbox-inline">
-                				<input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Domingo">Domingo
-                			</label>
-                			<label class="checkbox-inline">
-                				<input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Todos">Todos
-                			</label>
-                		</div>
-                	<span class="error1" style="display: none;">
-                			<i class="error-log fa fa-exclamation-triangle"></i>
-                	</span>
-                </div>
+                  <label for="dias">Días disponibles *</label><br>
+                    <div class="col-md-6">
+                      <label class="checkbox-inline">
+                        <input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Lunes" required>Lunes
+                      </label>
+                      <label class="checkbox-inline">
+                        <input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Martes" required>Martes
+                      </label>
+                      <label class="checkbox-inline">
+                        <input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Miércoles" required>Miércoles
+                      </label>
+                      <label class="checkbox-inline">
+                        <input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Jueves" required>Jueves
+                      </label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="checkbox-inline">
+                        <input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Viernes" required>Viernes
+                      </label>
+                      <label class="checkbox-inline">
+                        <input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Sábado" required>Sábado
+                      </label>
+                      <label class="checkbox-inline">
+                        <input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Domingo" required>Domingo
+                      </label>
+                      <label class="checkbox-inline">
+                        <input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Todos" required>Todos
+                      </label>
+                    </div>
+                    <span id="msg_error" class="col-md-12"></span>
+                </div><br><br>
                 <!-- End Días disponibles -->
 
                 <!-- Horarios disponibles -->
                 <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
                   <label for="horario_disponible">Horarios disponibles *</label>
-                  <textarea class="form-control" rows="5" id="horario_disponible" name="horario_disponible" required="required" type="text" value="" maxlength="80" placeholder="Ingresa el horario de los días disponibles..." data-rule-required="true" data-msg-required="Horario disponible es requerido"></textarea>
+                  <textarea class="form-control" rows="5" id="horario_disponible" name="horario_disponible" required="required" type="text" value="" maxlength="80" placeholder="Ingresa el horario de los días disponibles..." tabindex="2" data-rule-required="true" data-msg-required="Horario disponible es requerido"></textarea>
                   <span class="error1" style="display: none;">
                       <i class="error-log fa fa-exclamation-triangle"></i>
                   </span>
@@ -260,7 +269,7 @@
                 <!-- Tipo de actividad -->
                 <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
                   <label for="tipo_actividad">Tipo de Actividad *</label>
-                  <select class="form-control input-sm" id="tipo_actividad" name="tipo_actividad" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Tipo de actividad es requerido">
+                  <select class="form-control input-sm" id="tipo_actividad" name="tipo_actividad" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="3" data-rule-required="true" data-msg-required="Tipo de actividad es requerido">
                     <option value="">-- Selecciona --</option>
                     <option value="Aventura">Aventura</option>
                     <option value="Cultural">Cultural</option>
@@ -286,7 +295,7 @@
                 <!-- Personas adultas -->
                 <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
                   <label for="adultas">¿Para cuántas personas adultas? *</label>
-                  <input class="form-control input-sm" id="adultas" name="adultas" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Personas adultas es requerido" autocomplete="off">
+                  <input class="form-control input-sm" id="adultas" name="adultas" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="4" data-rule-required="true" data-msg-required="Personas adultas es requerido" autocomplete="off">
                   <span class="error1" style="display: none;">
                       <i class="error-log fa fa-exclamation-triangle"></i>
                   </span>
@@ -296,7 +305,7 @@
                 <!-- Niños (cuantos) -->
                 <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
                   <label for="ninos">¿Para cuántos niños? *</label>
-                  <input class="form-control input-sm" id="ninos" name="ninos" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Cuantos niños es requerido" autocomplete="off">
+                  <input class="form-control input-sm" id="ninos" name="ninos" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="5" data-rule-required="true" data-msg-required="Cuantos niños es requerido" autocomplete="off">
                   <span class="error1" style="display: none;">
                       <i class="error-log fa fa-exclamation-triangle"></i>
                   </span>
@@ -306,7 +315,7 @@
                 <!-- Hombres (cuantos) -->
                 <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
                   <label for="hombres">¿Para cuántos hombres? *</label>
-                  <input class="form-control input-sm" id="hombres" name="hombres" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Cuantos hombres es requerido" autocomplete="off">
+                  <input class="form-control input-sm" id="hombres" name="hombres" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="6" data-rule-required="true" data-msg-required="Cuantos hombres es requerido" autocomplete="off">
                   <span class="error1" style="display: none;">
                       <i class="error-log fa fa-exclamation-triangle"></i>
                   </span>
@@ -316,7 +325,7 @@
                 <!-- Mujeres (cuantas) -->
                 <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
                   <label for="mujeres">¿Para cuántas mujeres? *</label>
-                  <input class="form-control input-sm" id="mujeres" name="mujeres" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Cuantas mujeres es requerido" autocomplete="off">
+                  <input class="form-control input-sm" id="mujeres" name="mujeres" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="7" data-rule-required="true" data-msg-required="Cuantas mujeres es requerido" autocomplete="off">
                   <span class="error1" style="display: none;">
                       <i class="error-log fa fa-exclamation-triangle"></i>
                   </span>
@@ -330,21 +339,21 @@
                   </div>
                   <div class="col-md-4">
                     <label for="dias">Días: *</label>
-                    <input class="form-control input-sm" id="dias" name="dias" required="required" type="text" value="" maxlength="80" placeholder="Días" data-rule-required="true" data-msg-required="Días es requerido" autocomplete="off">
+                    <input class="form-control input-sm" id="dias" name="dias" required="required" type="text" value="" maxlength="80" placeholder="Días" tabindex="8" data-rule-required="true" data-msg-required="Días es requerido" autocomplete="off">
                     <span class="error1" style="display: none;">
                         <i class="error-log fa fa-exclamation-triangle"></i>
                     </span>
                   </div>
                   <div class="col-md-4">
                     <label for="dias">Horas: *</label>
-                    <input class="form-control input-sm" id="horas" name="horas" required="required" type="text" value="" maxlength="80" placeholder="Horas" data-rule-required="true" data-msg-required="Horas es requerido" autocomplete="off">
+                    <input class="form-control input-sm" id="horas" name="horas" required="required" type="text" value="" maxlength="80" placeholder="Horas" tabindex="9" data-rule-required="true" data-msg-required="Horas es requerido" autocomplete="off">
                     <span class="error1" style="display: none;">
                         <i class="error-log fa fa-exclamation-triangle"></i>
                     </span>
                   </div>
                   <div class="col-md-4">
                     <label for="dias">Minutos:: *</label>
-                    <input class="form-control input-sm" id="minutos" name="minutos" required="required" type="text" value="" maxlength="80" placeholder="Minutos" data-rule-required="true" data-msg-required="Minutos es requerido" autocomplete="off">
+                    <input class="form-control input-sm" id="minutos" name="minutos" required="required" type="text" value="" maxlength="80" placeholder="Minutos" tabindex="10" data-rule-required="true" data-msg-required="Minutos es requerido" autocomplete="off">
                     <span class="error1" style="display: none;">
                         <i class="error-log fa fa-exclamation-triangle"></i>
                     </span>
@@ -355,7 +364,7 @@
                 <!-- Disponible en inglés -->
                 <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
                   <label for="disponible_ingles">¿Disponible en inglés? *</label>
-                  <select class="form-control input-sm" id="disponible_ingles" name="disponible_ingles" required="required" type="text" value="" maxlength="80" placeholder="" data-rule-required="true" data-msg-required="Disponible en inglés es requerido">
+                  <select class="form-control input-sm" id="disponible_ingles" name="disponible_ingles" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="11" data-rule-required="true" data-msg-required="Disponible en inglés es requerido">
                     <option value="">-- Selecciona --</option>
                     <option value="Sí">Sí</option>
                     <option value="No">No</option>
@@ -369,7 +378,7 @@
                 <!-- Forma de pago -->
                 <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
                   <label for="forma_pago">Forma de pago*</label>
-                  <select class="form-control input-sm" id="forma_pago" name="forma_pago" required="required" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Forma de pago es requerido">
+                  <select class="form-control input-sm" id="forma_pago" name="forma_pago" required="required" type="text" value="" placeholder="" tabindex="12" data-rule-required="true" data-msg-required="Forma de pago es requerido">
                     <option value="">-- Selecciona --</option>
                     <option value="TC">TC</option>
                     <option value="PayPal">PayPal</option>
@@ -386,7 +395,7 @@
                 <!-- Precio -->
                 <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
                   <label for="precio">Precio de la actividad *</label>
-                  <textarea class="form-control" rows="5" id="precio" name="precio" required="required" type="text" value="" maxlength="80" placeholder="Describe como cobras ej. Por persona, por actividad, por recorrido, por día, etc..." data-rule-required="true" data-msg-required="Precio es requerido"></textarea>
+                  <textarea class="form-control" rows="5" id="precio" name="precio" required="required" type="text" value="" maxlength="80" placeholder="Describe como cobras ej. Por persona, por actividad, por recorrido, por día, etc..." tabindex="13" data-rule-required="true" data-msg-required="Precio es requerido"></textarea>
                   <span class="error1" style="display: none;">
                       <i class="error-log fa fa-exclamation-triangle"></i>
                   </span>
@@ -394,7 +403,7 @@
                 <!-- End Precio -->
 
               <input type="button" data-page="2" name="previous" class="previous action-button" value="Anterior" />
-              <input type="button" data-page="2" name="next" class="next action-button" value="Siguiente" />
+              <input type="button" id="checkBtn" data-page="2" name="next" class="next action-button" value="Siguiente" />
               <!-- <button data-page="2" name="previous" class="btn previous action-button btn-success">Anterior</button>
               <button data-page="2" name="next" class="btn next action-button btn-success">Siguiente</button> -->
             </fieldset>
@@ -407,7 +416,7 @@
               <!-- Descripción de la actividad -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
                 <label for="descripcion_experiencia">Descripción de la experiencia *</label>
-                <textarea class="form-control" rows="5" id="descripcion_experiencia" name="descripcion_experiencia" required="required" type="text" value="" maxlength="250" placeholder="Describe perfectamente la experiencia..." data-rule-required="true" data-msg-required="Experiencia es requerido"></textarea>
+                <textarea class="form-control" rows="5" id="descripcion_experiencia" name="descripcion_experiencia" required="required" type="text" value="" maxlength="250" placeholder="Describe perfectamente la experiencia..." tabindex="1" data-rule-required="true" data-msg-required="Experiencia es requerido"></textarea>
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -417,14 +426,14 @@
               <!-- A que otros servicios -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
                 <label for="servicios_acceso">¿A que otros servicios tienen acceso los contratantes? </label>
-                <textarea class="form-control" rows="5" id="servicios_acceso" name="servicios_acceso" type="text" value="" maxlength="250" placeholder="Opcional..."></textarea>
+                <textarea class="form-control" rows="5" id="servicios_acceso" name="servicios_acceso" type="text" value="" maxlength="250" placeholder="Opcional..." tabindex="2"></textarea>
               </div>
               <!-- End A que otros servicios -->
 
               <!-- Acerca del lugar -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
                 <label for="acerca_lugar">Acerca del lugar *</label>
-                <textarea class="form-control" rows="5" id="acerca_lugar" name="acerca_lugar" required="required" type="text" value="" maxlength="250" placeholder="Describe el lugar donde se desarrolla la actividad, ejemplo, Zona de pantanos, zona montañosa, zona urbana con mucho tráfico, zona para caminar, etc...." data-rule-required="true" data-msg-required="Descripción del lugar es requerido"></textarea>
+                <textarea class="form-control" rows="5" id="acerca_lugar" name="acerca_lugar" required="required" type="text" value="" maxlength="250" placeholder="Describe el lugar donde se desarrolla la actividad, ejemplo, Zona de pantanos, zona montañosa, zona urbana con mucho tráfico, zona para caminar, etc...." tabindex="3" data-rule-required="true" data-msg-required="Descripción del lugar es requerido"></textarea>
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -447,61 +456,59 @@
                 <label for="dias">Servicios *</label><br>
                   <div class="col-md-6">
                     <label class="checkbox-inline">
-                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Accesorios">Accesorios
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Accesorios" required>Accesorios
                     </label>
                     <label class="checkbox-inline">
-                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Agua">Agua
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Agua" required>Agua
                     </label>
                     <label class="checkbox-inline">
-                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Bicicleta">Bicicleta
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Bicicleta" required>Bicicleta
                     </label>
                     <label class="checkbox-inline">
-                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Cena">Cena
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Cena" required>Cena
                     </label>
                   </div>
                   <div class="col-md-6">
                     <label class="checkbox-inline">
-                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Coctel">Coctel
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Coctel" required>Coctel
                     </label>
                     <label class="checkbox-inline">
-                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Comida">Comida
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Comida" required>Comida
                     </label>
                     <label class="checkbox-inline">
-                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Desayuno">Desayuno
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Desayuno" required>Desayuno
                     </label>
                     <label class="checkbox-inline">
-                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Entradas">Entradas
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Entradas" required>Entradas
                     </label>
                   </div>
                   <div class="col-md-6">
                     <label class="checkbox-inline">
-                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Equipo">Equipo
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Equipo" required>Equipo
                     </label>
                     <label class="checkbox-inline">
-                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Refrescos">Refrescos
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Refrescos" required>Refrescos
                     </label>
                     <label class="checkbox-inline">
-                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Snack">Snack
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Snack" required>Snack
                     </label>
                     <label class="checkbox-inline">
-                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Tour">Tour
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Tour" required>Tour
                     </label>
                   </div>
                   <div class="col-md-6">
                     <label class="checkbox-inline">
-                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Transportación">Transportación
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Transportación" required>Transportación
                     </label>
                   </div>
-                <span class="error1" style="display: none;">
-                    <i class="error-log fa fa-exclamation-triangle"></i>
-                </span>
+                  <span id="msg_error2" class="col-md-12"></span>
               </div>
               <!-- End Servicios -->
 
               <!-- ¿Qué inclue el servicio? -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
                 <label for="incluye_servicio">¿Qué incluye el servicio? *</label>
-                <textarea class="form-control" rows="5" id="incluye_servicio" name="incluye_servicio" required="required" type="text" value="" maxlength="250" placeholder="Hacer una descripción de todo lo que incluye la experiencia para que las personas tengan un idea completa de lo que van a recibir por el precio -Es un complemento  al listado que incluye..." data-rule-required="true" data-msg-required="Servicio es requerido"></textarea>
+                <textarea class="form-control" rows="5" id="incluye_servicio" name="incluye_servicio" required="required" type="text" value="" maxlength="250" placeholder="Hacer una descripción de todo lo que incluye la experiencia para que las personas tengan un idea completa de lo que van a recibir por el precio -Es un complemento  al listado que incluye..." tabindex="1" data-rule-required="true" data-msg-required="Servicio es requerido"></textarea>
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -511,7 +518,7 @@
               <!-- ¿Qué hacer durante la experiencia? -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
                 <label for="durante_experiencia">¿Qué haremos durante la experiencia? *</label>
-                <textarea class="form-control" rows="5" id="durante_experiencia" name="durante_experiencia" required="required" type="text" value="" maxlength="250" placeholder="Hacer una descripción completa del servicio que vas a prestar para que las personas tengan una idea completa de lo que van a recibir y no tener sorpresas..." data-rule-required="true" data-msg-required="Experiencia es requerido"></textarea>
+                <textarea class="form-control" rows="5" id="durante_experiencia" name="durante_experiencia" required="required" type="text" value="" maxlength="250" placeholder="Hacer una descripción completa del servicio que vas a prestar para que las personas tengan una idea completa de lo que van a recibir y no tener sorpresas..." tabindex="2" data-rule-required="true" data-msg-required="Experiencia es requerido"></textarea>
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -521,7 +528,7 @@
               <!-- ¿Quién puede apuntarse? -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
                 <label for="apuntarse">¿Quién puede apuntarse? *</label>
-                <textarea class="form-control" rows="5" id="apuntarse" name="apuntarse" required="required" type="text" value="" maxlength="250" placeholder="Hacer una descripción completa del tipo de personas que pueden inscribirse para participar en la experiencia turística, ser muy explícito en las características que deben tener las personas para que no hayan sorpresas..." data-rule-required="true" data-msg-required="Quienes es requerido"></textarea>
+                <textarea class="form-control" rows="5" id="apuntarse" name="apuntarse" required="required" type="text" value="" maxlength="250" placeholder="Hacer una descripción completa del tipo de personas que pueden inscribirse para participar en la experiencia turística, ser muy explícito en las características que deben tener las personas para que no hayan sorpresas..." tabindex="3" data-rule-required="true" data-msg-required="Quienes es requerido"></textarea>
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -531,7 +538,7 @@
               <!-- Notas adicionales -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
                 <label for="notas_adicionales">Notas adicionales *</label>
-                <textarea class="form-control" rows="5" id="notas_adicionales" name="notas_adicionales" required="required" type="text" value="" maxlength="250" placeholder="Si necesitas especificar algo adicional aquí lo puedes hacer" data-rule-required="true" data-msg-required="Notas es requerido"></textarea>
+                <textarea class="form-control" rows="5" id="notas_adicionales" name="notas_adicionales" required="required" type="text" value="" maxlength="250" placeholder="Si necesitas especificar algo adicional aquí lo puedes hacer" tabindex="4" data-rule-required="true" data-msg-required="Notas es requerido"></textarea>
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -541,7 +548,7 @@
               <!-- Política de cancelación -->
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
                 <label for="politica">Política de cancelación *</label>
-                <textarea class="form-control" rows="5" id="politica" name="politica" required="required" type="text" value="" maxlength="250" placeholder="Escribe la política de cancelación" data-rule-required="true" data-msg-required="Política es requerido"></textarea>
+                <textarea class="form-control" rows="5" id="politica" name="politica" required="required" type="text" value="" maxlength="250" placeholder="Escribe la política de cancelación" tabindex="5" data-rule-required="true" data-msg-required="Política es requerido"></textarea>
                 <span class="error1" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
@@ -549,7 +556,7 @@
               <!-- End Política de cancelación -->
 
               <input type="button" data-page="4" name="previous" class="previous action-button" value="Anterior" />
-              <input type="button" data-page="4" name="next" class="next action-button" value="Siguiente" />
+              <input type="button" id="checkBtn2" data-page="4" name="next" class="next action-button" value="Siguiente" />
               <!-- <button data-page="4" name="previous" class="btn previous action-button btn-success">Anterior</button>
               <button data-page="4" name="next" class="btn next action-button btn-success">Siguiente</button> -->
             </fieldset>
@@ -591,6 +598,42 @@
       });
     </script>
 
+    <script type="text/javascript">
+      $(document).ready(function () {
+          $('#checkBtn').click(function() {
+            checked = $("input[type=checkbox]:checked").length;
+
+            if(!checked) {
+              // alert("Debe verificar al menos un checkbox.");
+              var span_check = document.createElement('span');
+              span_check.innerHTML = ['<div class="col-md-12"><span class="error1"><i class="error-log fa fa-exclamation-triangle"></i>&nbsp;&nbsp;Debe verificar al menos un checkbox de días.</span></div>'];
+              document.getElementById('msg_error').insertBefore(span_check, null);
+              return false;
+            }
+
+          });
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+          $('#checkBtn2').click(function() {
+            checked2 = $("#checkbox2:checked").length;
+
+            if(!checked2) {
+              // alert("Debe verificar al menos un checkbox.");
+              var span_check2 = document.createElement('span');
+              span_check2.innerHTML = ['<div class="col-md-12"><span class="error1"><i class="error-log fa fa-exclamation-triangle"></i>&nbsp;&nbsp;Debe verificar al menos un checkbox de servicios.</span></div>'];
+              document.getElementById('msg_error2').insertBefore(span_check2, null);
+              return false;
+            }
+
+          });
+      });
+    </script>
+
+
+
     <script>
       function handleFileSelect(evt) {
         var files = evt.target.files; // FileList object
@@ -623,7 +666,7 @@
       document.getElementById('files').addEventListener('change', handleFileSelect, false);
     </script>
 
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
     <script src='https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js'></script>
 
