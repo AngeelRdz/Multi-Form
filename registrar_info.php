@@ -118,7 +118,7 @@
 
                   $id_registro = mysqli_insert_id($conection);
 
-                  $sql_actividades = "INSERT INTO `actividades` (`nombre_actividad`, `dias_disponibles`, `horarios_disponibles`, `tipo_actividad`, `personas_adultas`,
+                  $sql_actividades = "INSERT INTO actividades (`nombre_actividad`, `dias_disponibles`, `horarios_disponibles`, `tipo_actividad`, `personas_adultas`,
                                       `ninos`, `hombres`, `mujeres`, `duracion_dias`, `duracion_horas`, `duracion_minutos`, `disponible_ingles`, `forma_pago`, `precio`, `id_empresa`)
                           VALUES ('" . $nombre_actividad . "', '" . $dias_disponibles . "', '" . $horario_disponible . "', '" . $tipo_actividad . "', '" . $adultas . "', '" . $ninos . "',
                             '" . $hombres . "', '" . $mujeres . "', '" . $dias . "', '" . $horas . "', '" . $minutos . "', '" . $disponible_ingles . "', '" . $forma_pago . "',
@@ -163,7 +163,7 @@
 
                   if (isset($_POST['descripcion_experiencia'])) {
 
-                  $sql_descripcion_actividades = "INSERT INTO `descripcion_actividades` (`descripcion_actividad`, `servicios_contratantes`, `acerca_lugar`, `id_empresa`)
+                  $sql_descripcion_actividades = "INSERT INTO descripcion_actividades (`descripcion_actividad`, `servicios_contratantes`, `acerca_lugar`, `id_empresa`)
                           VALUES ('" . $descripcion_experiencia . "', '" . $servicios_acceso . "', '" . $acerca_lugar . "', '" .$id_registro. "')";
 
                   $resultados_descripcion_actividades = $conection->query($sql_descripcion_actividades);
@@ -236,25 +236,23 @@
                             <br>";
 
                   if (isset($_FILES['files']) && isset($_POST['nombre_empresa'])) {
-
+                      echo "<pre>";print_r($_FILES);echo "</pre>";
+                      echo "<br><br><br>";
+                      echo "<pre>";print_r($_POST);echo "</pre>";
                     //almacenamos las propiedades de las imagenes
                     $name_array = $_FILES['files']['name'];
                     $tmp_name_array = $_FILES['files']['tmp_name'];
                     $type_array = $_FILES['files']['type'];
                     $size_array = $_FILES['files']['size'];
                     $error_array = $_FILES['files']['error'];
-
                     $nombreImagen =  "Galería de " . trim($nombre_empresa);
 
                     //recorremos el array de imagenes para subirlas al simultaneo
                     for($i = 0; $i < count($tmp_name_array); $i++){
                       if(move_uploaded_file($tmp_name_array[$i], "galeria/".$name_array[$i])){
-
                           //guardamos en la base de datos el nombre
                           $sql_galeria = 'INSERT INTO `galeria` (src, active, nombre_imagen, id_empresa) VALUES ("'.$name_array[$i].'", "1", "' .$nombreImagen. '", "' .$id_registro. '")';
-
                           $resultados_galeria = $conection->query($sql_galeria);
-
                           //mostramos las imagenes para verificar que se subieron
                           echo "
                                 <div class='col-md-3'>
@@ -262,9 +260,7 @@
                                   <span class='span_texto_registrado'>$name_array[$i]</span><br><br>
                                 </div>
                               ";
-                      }
-                      else
-                      {
+                      }else{
                           //si ocurrio algun problema entonces
                           echo "No se pudo guardar la galería en la carpeta ".$name_array[$i]."<br>";
                       }
