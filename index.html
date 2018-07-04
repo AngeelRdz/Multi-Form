@@ -10,18 +10,21 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
   </head>
 
   <body>
 
+    <div id="page-loader"><span class="preloader-interior"></span></div>
+
     <div class="container">
       <div class="row">
 
-        <div class="info">
-          <h1>Formulario de Actividades</h1>
-        </div>
-
         <div class="col-md-12">
+
+          <h1 class="titulo_formulario">Formulario de Actividades</h1>
+
           <form class="steps" method="post" id='signin' name="signin" action="registrar_info.php" enctype="multipart/form-data">
             <ul id="progressbar">
               <li class="active">Información Personal/Empresa</li>
@@ -209,38 +212,38 @@
 
                 <!-- Begin Total Number of Constituents in Your Database Field -->
                 <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
-                  <label for="dias">Días disponibles *</label><br>
-                    <div class="col-md-6">
-                      <label for="lunes" class="checkbox-inline">
-                        <input id="lunes" name="dias_disponibles" type="checkbox" value="Lunes">Lunes
-                      </label>
-                      <label for="martes" class="checkbox-inline">
-                        <input id="martes" name="dias_disponibles" type="checkbox" value="Martes">Martes
-                      </label>
-                      <label for="miercoles" class="checkbox-inline">
-                        <input id="miercoles" name="dias_disponibles" type="checkbox" value="Miércoles">Miércoles
-                      </label>
-                      <label for="jueves" class="checkbox-inline">
-                        <input id="jueves" name="dias_disponibles" type="checkbox" value="Jueves">Jueves
-                      </label>
-                    </div>
-                    <div class="col-md-6">
-                      <label for="viernes" class="checkbox-inline">
-                        <input id="viernes" name="dias_disponibles" type="checkbox" value="Viernes">Viernes
-                      </label>
-                      <label for="sabado" class="checkbox-inline">
-                        <input id="sabado" name="dias_disponibles" type="checkbox" value="Sábado">Sábado
-                      </label>
-                      <label for="domingo" class="checkbox-inline">
-                        <input id="domingo" name="dias_disponibles" type="checkbox" value="Domingo">Domingo
-                      </label>
-                      <label for="todos" class="checkbox-inline">
-                        <input id="todos" name="dias_disponibles" type="checkbox" value="Todos">Todos
-                      </label>
-                    </div>
-                  <span class="error1" style="display: none;">
-                      <i class="error-log fa fa-exclamation-triangle"></i>
-                  </span>
+                	<label for="dias">Días disponibles *</label><br>
+                		<div class="col-md-6">
+                			<label class="checkbox-inline">
+                				<input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Lunes">Lunes
+                			</label>
+                			<label class="checkbox-inline">
+                				<input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Martes">Martes
+                			</label>
+                			<label class="checkbox-inline">
+                				<input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Miércoles">Miércoles
+                			</label>
+                			<label class="checkbox-inline">
+                				<input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Jueves">Jueves
+                			</label>
+                		</div>
+                		<div class="col-md-6">
+                			<label class="checkbox-inline">
+                				<input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Viernes">Viernes
+                			</label>
+                			<label class="checkbox-inline">
+                				<input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Sábado">Sábado
+                			</label>
+                			<label class="checkbox-inline">
+                				<input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Domingo">Domingo
+                			</label>
+                			<label class="checkbox-inline">
+                				<input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Todos">Todos
+                			</label>
+                		</div>
+                	<span class="error1" style="display: none;">
+                			<i class="error-log fa fa-exclamation-triangle"></i>
+                	</span>
                 </div>
                 <!-- End Total Number of Constituents in Your Database Field -->
 
@@ -261,7 +264,7 @@
                     <option value="">-- Selecciona --</option>
                     <option value="Aventura">Aventura</option>
                     <option value="Cultural">Cultural</option>
-                    <option value="Arqueolócia">Arqueolócia</option>
+                    <option value="Arqueológica">Arqueológica</option>
                     <option value="Religiosa">Religiosa</option>
                     <option value="Sol y playa">Sol y playa</option>
                     <option value="Gastronómico">Gastronómico</option>
@@ -441,50 +444,50 @@
               <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
                 <label for="dias">Servicios *</label><br>
                   <div class="col-md-6">
-                    <label for="agua" class="checkbox-inline">
-                      <input id="agua" name="servicios" type="checkbox" value="Agua">Agua
+                    <label class="checkbox-inline">
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Accesorios">Accesorios
                     </label>
-                    <label for="cena" class="checkbox-inline">
-                      <input id="cena" name="servicios" type="checkbox" value="Cena">Cena
+                    <label class="checkbox-inline">
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Agua">Agua
                     </label>
-                    <label for="bicicleta" class="checkbox-inline">
-                      <input id="bicicleta" name="servicios" type="checkbox" value="Bicicleta">Bicicleta
+                    <label class="checkbox-inline">
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Bicicleta">Bicicleta
                     </label>
-                    <label for="cena" class="checkbox-inline">
-                      <input id="cena" name="servicios" type="checkbox" value="Cena">Cena
-                    </label>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="coctel" class="checkbox-inline">
-                      <input id="coctel" name="servicios" type="checkbox" value="Coctel">Coctel
-                    </label>
-                    <label for="comida" class="checkbox-inline">
-                      <input id="comida" name="servicios" type="checkbox" value="Comida">Comida
-                    </label>
-                    <label for="desayuno" class="checkbox-inline">
-                      <input id="desayuno" name="servicios" type="checkbox" value="Desayuno">Desayuno
-                    </label>
-                    <label for="entradas" class="checkbox-inline">
-                      <input id="entradas" name="servicios" type="checkbox" value="Entradas">Entradas
+                    <label class="checkbox-inline">
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Cena">Cena
                     </label>
                   </div>
                   <div class="col-md-6">
-                    <label for="equipo" class="checkbox-inline">
-                      <input id="equipo" name="servicios" type="checkbox" value="Equipo">Equipo
+                    <label class="checkbox-inline">
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Coctel">Coctel
                     </label>
-                    <label for="refrescos" class="checkbox-inline">
-                      <input id="refrescos" name="servicios" type="checkbox" value="Refrescos">Refrescos
+                    <label class="checkbox-inline">
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Comida">Comida
                     </label>
-                    <label for="snack" class="checkbox-inline">
-                      <input id="snack" name="servicios" type="checkbox" value="Snack">Snack
+                    <label class="checkbox-inline">
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Desayuno">Desayuno
                     </label>
-                    <label for="tour" class="checkbox-inline">
-                      <input id="tour" name="servicios" type="checkbox" value="Tour">Tour
+                    <label class="checkbox-inline">
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Entradas">Entradas
                     </label>
                   </div>
                   <div class="col-md-6">
-                    <label for="transportacion" class="checkbox-inline">
-                      <input id="transportacion" name="servicios" type="checkbox" value="Transportación">Transportación
+                    <label class="checkbox-inline">
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Equipo">Equipo
+                    </label>
+                    <label class="checkbox-inline">
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Refrescos">Refrescos
+                    </label>
+                    <label class="checkbox-inline">
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Snack">Snack
+                    </label>
+                    <label class="checkbox-inline">
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Tour">Tour
+                    </label>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="checkbox-inline">
+                      <input id="checkbox2" name="servicios[]" type="checkbox" value="Transportación">Transportación
                     </label>
                   </div>
                 <span class="error1" style="display: none;">
@@ -577,6 +580,12 @@
         </div>
       </div>
     </div>
+
+    <script>
+      $(window).load(function(){
+          $('#page-loader').fadeOut(1000);
+      });
+    </script>
 
     <script>
       function handleFileSelect(evt) {

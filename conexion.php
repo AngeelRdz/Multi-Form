@@ -1,8 +1,8 @@
 <?php
 
-  $host="172.17.0.3";
+  $host="localhost";
   $usuario="root";
-  $password="mysql";
+  $password="";
   $base="multi_form";
   $conection= new mysqli($host, $usuario, $password, $base);
   $conection->set_charset("utf8");
