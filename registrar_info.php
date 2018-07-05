@@ -74,6 +74,8 @@
                   $notas_adicionales = $_POST["notas_adicionales"];
                   $politica = $_POST["politica"];
 
+                  $requisitos = $_POST["requisitos"];
+
                   //aqui van las imagenes (Carpeta o ruta que usaras)
                   $path = "galeria/";
 
@@ -86,47 +88,44 @@
                   //echo $sql;
 
                   echo  "
-                        <div class='contenedor'>
-                          <div class='container'>
-                            <h3 class='subtitulo_secciones'>Información personal/empresa</h3>
-                            <center>
-                              <hr class='hr_style'><br>
-                            </center>
-                            <div class='col-md-12'>
-                              <p class='titulo_label col-md-4'>Nombre de la empresa: <span class='span_texto_registrado'> $nombre_empresa </span></p>
-                              <p class='titulo_label col-md-4'>Giro de la empresa: <span class='span_texto_registrado'> $giro_empresa </span></p>
-                              <p class='titulo_label col-md-4'>Nombre del contacto: <span class='span_texto_registrado'> $nombre_contacto </span></p>
-                              <p class='titulo_label col-md-4'>Apellido del contacto: <span class='span_texto_registrado'> $apellido_contacto </span></p>
-                              <p class='titulo_label col-md-4'>Teléfono celular: <span class='span_texto_registrado'> $celular </span></p>
-                              <p class='titulo_label col-md-4'>Teléfono oficina: <span class='span_texto_registrado'> $tel_oficina </span></p>
-                              <p class='titulo_label col-md-4'>Email: <span class='span_texto_registrado'> $email </span></p>
-                              <p class='titulo_label col-md-4'>Página web: <span class='span_texto_registrado'> $pagina_web </span></p>
-                              <p class='titulo_label col-md-4'>Ciudad: <span class='span_texto_registrado'> $ciudad </span></p>
-                              <p class='titulo_label col-md-4'>País: <span class='span_texto_registrado'> $pais </span></p>
-                              <p class='titulo_label col-md-4'>Estado: <span class='span_texto_registrado'> $estado </span></p>
-                              <p class='titulo_label col-md-4'>Código postal: <span class='span_texto_registrado'> $codigo_postal </span></p>
-                              <p class='titulo_label col-md-4'>Dirección: <span class='span_texto_registrado'> $direccion </span></p>
-                              <p class='titulo_label col-md-4'>Acerca de mí: <span class='span_texto_registrado'> $acerca </span></p>
-                            </div>
+                        <div class='container'>
+                          <h3 class='subtitulo_secciones'>Información personal/empresa</h3>
+                          <div class='col-md-12'>
+                            <p class='titulo_label col-md-4'>Nombre de la empresa: <span class='span_texto_registrado'> $nombre_empresa </span></p>
+                            <p class='titulo_label col-md-4'>Giro de la empresa: <span class='span_texto_registrado'> $giro_empresa </span></p>
+                            <p class='titulo_label col-md-4'>Nombre del contacto: <span class='span_texto_registrado'> $nombre_contacto </span></p>
+                            <p class='titulo_label col-md-4'>Apellido del contacto: <span class='span_texto_registrado'> $apellido_contacto </span></p>
+                            <p class='titulo_label col-md-4'>Teléfono celular: <span class='span_texto_registrado'> $celular </span></p>
+                            <p class='titulo_label col-md-4'>Teléfono oficina: <span class='span_texto_registrado'> $tel_oficina </span></p>
+                            <p class='titulo_label col-md-4'>Email: <span class='span_texto_registrado'> $email </span></p>
+                            <p class='titulo_label col-md-4'>Página web: <span class='span_texto_registrado'> $pagina_web </span></p>
+                            <p class='titulo_label col-md-4'>Ciudad: <span class='span_texto_registrado'> $ciudad </span></p>
+                            <p class='titulo_label col-md-4'>País: <span class='span_texto_registrado'> $pais </span></p>
+                            <p class='titulo_label col-md-4'>Estado: <span class='span_texto_registrado'> $estado </span></p>
+                            <p class='titulo_label col-md-4'>Código postal: <span class='span_texto_registrado'> $codigo_postal </span></p>
+                            <p class='titulo_label col-md-4'>Dirección: <span class='span_texto_registrado'> $direccion </span></p>
+                            <p class='titulo_label col-md-4'>Acerca de mí: <span class='span_texto_registrado'> $acerca </span></p>
+                          </div>
                         ";
 
                             if (!$sql) {
                               echo "
-                                    <div class='col-md-12 contenido_exito'>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
                                       <h5 class='caja_error'><i class='fa fa-close' style='color:white'></i>&nbsp;&nbsp;Lo sentimos, no se pudo registrar la empresa $nombre_empresa.</h5>
                                     </div>
                               ";
                             }else {
                               echo "
-                                    <div class='col-md-12 contenido_exito'>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
                                       <h5 class='caja_bien'><i class='fa fa-check' style='color:white'></i>&nbsp;&nbsp;Registro de la empresa $nombre_empresa exitosamente.</h5>
                                     </div>
                               ";
                             }
 
                   echo "
-                          </div>
-                        </div>";
+                        </div>
+                        <hr class='hr_style'><br>
+                      ";
 
                   }
 
@@ -154,47 +153,44 @@
                   //echo $sql_actividades;
 
                   echo "
-                  			<div class='contenedor'>
-                  				<div class='container'>
-                  					<h3 class='subtitulo_secciones'>Información de la actividad</h3>
-                  					<center>
-                  						<hr class='hr_style'><br>
-                  					</center>
-                            <div class='col-md-12'>
-                    					<p class='titulo_label col-md-4'>Nombre de la actividad: <span class='span_texto_registrado'> $nombre_actividad </span></p>
-                    					<p class='titulo_label col-md-4'>Días disponibles: <span class='span_texto_registrado'> $sql_valores </span></p>
-                    					<p class='titulo_label col-md-4'>Horarios disponibles: <span class='span_texto_registrado'> $horario_disponible </span></p>
-                    					<p class='titulo_label col-md-4'>Tipo de Actividad: <span class='span_texto_registrado'> $tipo_actividad </span></p>
-                    					<p class='titulo_label col-md-4'>¿Cuántas personas adultas?: <span class='span_texto_registrado'> $adultas </span></p>
-                    					<p class='titulo_label col-md-4'>¿Cuántos niños?: <span class='span_texto_registrado'> $ninos </span></p>
-                    					<p class='titulo_label col-md-4'>¿Cuántos hombres?: <span class='span_texto_registrado'> $hombres </span></p>
-                    					<p class='titulo_label col-md-4'>¿Cuántas mujeres?: <span class='span_texto_registrado'> $mujeres </span></p>
-                    					<p class='titulo_label col-md-4'>Duración (días): <span class='span_texto_registrado'> $dias </span></p>
-                    					<p class='titulo_label col-md-4'>Duración (horas): <span class='span_texto_registrado'> $horas </span></p>
-                    					<p class='titulo_label col-md-4'>Duración (minutos): <span class='span_texto_registrado'> $minutos </span></p>
-                    					<p class='titulo_label col-md-4'>¿Disponible en inglés?: <span class='span_texto_registrado'> $disponible_ingles </span></p>
-                    					<p class='titulo_label col-md-4'>Forma de pago: <span class='span_texto_registrado'> $forma_pago </span></p>
-                    					<p class='titulo_label col-md-4'>Precio: <span class='span_texto_registrado'> $precio </span></p>
-                            </div>
+                  			<div class='container'>
+                					<h3 class='subtitulo_secciones'>Información de la actividad</h3>
+                          <div class='col-md-12'>
+                  					<p class='titulo_label col-md-4'>Nombre de la actividad: <span class='span_texto_registrado'> $nombre_actividad </span></p>
+                  					<p class='titulo_label col-md-4'>Días disponibles: <span class='span_texto_registrado'> $sql_valores </span></p>
+                  					<p class='titulo_label col-md-4'>Horarios disponibles: <span class='span_texto_registrado'> $horario_disponible </span></p>
+                  					<p class='titulo_label col-md-4'>Tipo de Actividad: <span class='span_texto_registrado'> $tipo_actividad </span></p>
+                  					<p class='titulo_label col-md-4'>¿Cuántas personas adultas?: <span class='span_texto_registrado'> $adultas </span></p>
+                  					<p class='titulo_label col-md-4'>¿Cuántos niños?: <span class='span_texto_registrado'> $ninos </span></p>
+                  					<p class='titulo_label col-md-4'>¿Cuántos hombres?: <span class='span_texto_registrado'> $hombres </span></p>
+                  					<p class='titulo_label col-md-4'>¿Cuántas mujeres?: <span class='span_texto_registrado'> $mujeres </span></p>
+                  					<p class='titulo_label col-md-4'>Duración (días): <span class='span_texto_registrado'> $dias </span></p>
+                  					<p class='titulo_label col-md-4'>Duración (horas): <span class='span_texto_registrado'> $horas </span></p>
+                  					<p class='titulo_label col-md-4'>Duración (minutos): <span class='span_texto_registrado'> $minutos </span></p>
+                  					<p class='titulo_label col-md-4'>¿Disponible en inglés?: <span class='span_texto_registrado'> $disponible_ingles </span></p>
+                  					<p class='titulo_label col-md-4'>Forma de pago: <span class='span_texto_registrado'> $forma_pago </span></p>
+                  					<p class='titulo_label col-md-4'>Precio: <span class='span_texto_registrado'> $precio </span></p>
+                          </div>
                       ";
 
                   					if (!$sql_actividades) {
                               echo "
-                                    <div class='col-md-12 contenido_exito'>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
                                       <h5 class='caja_error'><i class='fa fa-close' style='color:white'></i>&nbsp;&nbsp;Lo sentimos, no se pudo registrar la actividad $nombre_actividad.</h5>
                                     </div>
                               ";
                   					}else {
                   						echo "
-                                    <div class='col-md-12 contenido_exito'>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
                                       <h5 class='caja_bien'><i class='fa fa-check' style='color:white'></i>&nbsp;&nbsp;Registro de la actividad $nombre_actividad exitosamente.</h5>
                                     </div>
                               ";
                   					}
 
                   echo "
-                  				</div>
-                  			</div>";
+                  			</div>
+                        <hr class='hr_style'><br>
+                      ";
 
                   }
 
@@ -207,36 +203,33 @@
                   //echo $sql_descripcion_actividades;
 
                   echo "
-                        <div class='contenedor'>
-                          <div class='container'>
-                            <h3 class='subtitulo_secciones'>Descripción de la actividad</h3>
-                            <center>
-                              <hr class='hr_style'><br>
-                            </center>
-                            <div class='col-md-12'>
-                              <p class='titulo_label col-md-4'>Descripción de la experiencia: <span class='span_texto_registrado'> $descripcion_experiencia </span></p>
-                              <p class='titulo_label col-md-4'>¿A que otros servicios tienen acceso los contratantes?: <span class='span_texto_registrado'> $servicios_acceso </span></p>
-                              <p class='titulo_label col-md-4'>Acerca del lugar: <span class='span_texto_registrado'> $acerca_lugar </span></p>
-                            </div>
+                        <div class='container'>
+                          <h3 class='subtitulo_secciones'>Descripción de la actividad</h3>
+                          <div class='col-md-12'>
+                            <p class='titulo_label col-md-4'>Descripción de la experiencia: <span class='span_texto_registrado'> $descripcion_experiencia </span></p>
+                            <p class='titulo_label col-md-4'>¿A que otros servicios tienen acceso los contratantes?: <span class='span_texto_registrado'> $servicios_acceso </span></p>
+                            <p class='titulo_label col-md-4'>Acerca del lugar: <span class='span_texto_registrado'> $acerca_lugar </span></p>
+                          </div>
                       ";
 
                             if (!$sql_descripcion_actividades) {
                               echo "
-                                    <div class='col-md-12 contenido_exito'>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
                                       <h5 class='caja_error'><i class='fa fa-close' style='color:white'></i>&nbsp;&nbsp;Lo sentimos, no se pudo registrar la descripción de la actividad.</h5>
                                     </div>
                               ";
                             }else {
                               echo "
-                                    <div class='col-md-12 contenido_exito'>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
                                       <h5 class='caja_bien'><i class='fa fa-check' style='color:white'></i>&nbsp;&nbsp;Registro de descripción de la actividad exitosamente.</h5>
                                     </div>
                               ";
                             }
 
                   echo "
-                          </div>
-                        </div>";
+                        </div>
+                        <hr class='hr_style'><br>
+                      ";
 
                   }
 
@@ -258,12 +251,8 @@
                   //echo $sql_servicios;
 
                   echo "
-                        <div class='contenedor'>
-                          <div class='container'>
+                        <div class='container'>
                             <h3 class='subtitulo_secciones'>Servicios que incluye</h3>
-                            <center>
-                              <hr class='hr_style'><br>
-                            </center>
                             <div class='col-md-12'>
                               <p class='titulo_label col-md-4'>Servicios: <span class='span_texto_registrado'> $sql_servicios_seleccionados </span></p>
                               <p class='titulo_label col-md-4'>¿Qué incluye el servicio?: <span class='span_texto_registrado'> $incluye_servicio </span></p>
@@ -276,30 +265,27 @@
 
                             if (!$sql_servicios) {
                               echo "
-                                    <div class='col-md-12 contenido_exito'>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
                                       <h5 class='caja_error'><i class='fa fa-close' style='color:white'></i>&nbsp;&nbsp;Lo sentimos, no se pudo registrar servicio (s).</h5>
                                     </div>
                               ";
                             }else {
                               echo "
-                                    <div class='col-md-12 contenido_exito'>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
                                       <h5 class='caja_bien'><i class='fa fa-check' style='color:white'></i>&nbsp;&nbsp;Registro de servicio (s) exitosamente.</h5>
                                     </div>
                               ";
                             }
 
                     echo "
-                            </div>
-                          </div>";
+                          </div>
+                          <hr class='hr_style'><br>
+                        ";
                   }
 
-                  echo "<div class='contenedor'>
-                          <div class='container'>
-                            <h3 class='subtitulo_secciones'>Galería</h3>
-                            <center>
-                              <hr class='hr_style'>
-                            </center>
-                            <br>";
+                  echo "<div class='container'>
+                          <h3 class='subtitulo_secciones'>Galería</h3>
+                          <br>";
 
                   if (isset($_FILES['files']) && isset($_POST['nombre_empresa'])) {
                     // echo "<pre>";print_r($_FILES);echo "</pre>";
@@ -322,7 +308,7 @@
                           $resultados_galeria = $conection->query($sql_galeria);
                           //mostramos las imagenes para verificar que se subieron
                           echo "
-                                <div class='col-md-3'>
+                                <div class='col-md-3 col-sm-6 col-xs-6'>
                                   <img class='thumb' src='".$path.$name_array[$i]."'><br>
                                   <span class='span_texto_registrado'>$name_array[$i]</span><br><br>
                                 </div>
@@ -335,31 +321,69 @@
                   }
                   if (!$sql_galeria) {
                     echo "
-                          <div class='col-md-12 contenido_exito'>
+                          <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
                             <h5 class='caja_error'><i class='fa fa-close' style='color:white'></i>&nbsp;&nbsp;Lo sentimos, no se pudo registrar la  $nombreImagen.</h5>
                           </div>
                     ";
                   }else {
                     echo "
-                          <div class='col-md-12 contenido_exito'>
+                          <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
                             <h5 class='caja_bien'><i class='fa fa-check' style='color:white'></i>&nbsp;&nbsp;Registro de $nombreImagen exitosamente.</h5>
                           </div>
                     ";
                   }
 
                   echo "
-                        </div>
                       </div>
+                      <hr class='hr_style'><br>
+                    ";
+                  }
 
+                  if (isset($_POST['descripcion_experiencia'])) {
+
+                  $sql_requisitos = "INSERT INTO requisitos (`descripcion_requisitos`, `id_empresa`)
+                          VALUES ('" . $requisitos . "', '" .$id_registro. "')";
+
+                  $resultados_descripcion_actividades = $conection->query($sql_requisitos);
+                  //echo $sql_requisitos;
+
+                  echo "
+                        <div class='container'>
+                          <h3 class='subtitulo_secciones'>Requisitos</h3>
+                          <div class='col-md-12'>
+                            <p class='titulo_label col-md-12'>Descripción de la experiencia: <span class='span_texto_registrado'> $requisitos </span></p>
+                          </div>
+                      ";
+
+                            if (!$sql_requisitos) {
+                              echo "
+                                    <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
+                                      <h5 class='caja_error'><i class='fa fa-close' style='color:white'></i>&nbsp;&nbsp;Lo sentimos, no se pudieron registrar los requisitos.</h5>
+                                    </div>
+                              ";
+                            }else {
+                              echo "
+                                    <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
+                                      <h5 class='caja_bien'><i class='fa fa-check' style='color:white'></i>&nbsp;&nbsp;Registro de requisitos exitosamente.</h5>
+                                    </div>
+                              ";
+                            }
+
+                  echo "
+                        </div>
+                        <hr class='hr_style'><br>
+                      ";
+
+                  }
+
+                  echo "
                         <div class='container'>
                           <center>
                             <a href='index.html' class='btn next action-button btn-success' role='button' aria-pressed='true'>OK</a>
                           </center>
                         </div>
                         <br><br>
-
-                        ";
-                  }
+                  ";
 
                 }
 

@@ -19,22 +19,22 @@ body {
 /* Formulario */
 
 .steps {
-  width: 675px;
+  width: 100%;
   margin: 50px auto;
-  position: relative;
+  /*position: relative; */
 }
 
 .steps fieldset {
   background: white;
   border: 0 none;
   border-radius: 0px;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  /* box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4); */
   padding: 20px 30px;
   border-top: 9px solid #fff;
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 5%;
-  position: absolute;
+  /* position: absolute; */
 }
 
 /* Oculta todos excepto al primero */
@@ -185,7 +185,7 @@ input:not([type=submit]):not([type=file]):not([type=checkbox]):not([type=radio])
 /* Progressbar */
 
 #progressbar {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   overflow: hidden;
   counter-reset: step;
   width:100%;
@@ -194,12 +194,13 @@ input:not([type=submit]):not([type=file]):not([type=checkbox]):not([type=radio])
 
 #progressbar li {
   list-style-type: none;
-    color: rgb(51, 51, 51);
+  color: rgb(51, 51, 51);
   text-transform: uppercase;
   font-size: 9px;
-  width: 20%;
+  width: 16%;
   float: left;
   position: relative;
+  margin-bottom: 3%;
 }
 
 #progressbar li:before {
@@ -289,8 +290,10 @@ textarea.form-control {
 }
 
 .thumb {
-  width: 110px;
-  height: 75px;
+  /* width: 110px;
+  height: 75px; */
+  width: 100%;
+  height: 150px;
   border: 1px solid #1650e3;
   margin: 10px 5px 10px 0;
 }
@@ -324,7 +327,7 @@ h1.titulo {
 
 hr.hr_style {
     border-top: 2px solid #1650e3;
-    width: 10%;
+    width: 100%;
 }
 
 h3.subtitulo_secciones {
@@ -548,15 +551,19 @@ span.span_texto_registrado {
     p.texto_galeria {
         text-align: center;
     }
+
+    #progressbar li {
+        width: 33%;
+    }
+
+    .servicios:after {
+      /* El conector no es necesario antes del primer paso */
+      content: none!important;
+    }
 }
 
 @media (max-width:675px){
     /* Mobile phone: uncollapse all fields: remove progress bar */
-    .steps {
-      width: 100%;
-      margin: 50px auto;
-      position: relative;
-    }
 
     /* Move error logs */
     .error1 {
@@ -564,8 +571,11 @@ span.span_texto_registrado {
     }
 
     .steps fieldset {
-        width: 80%;
-        margin: 0 10% 10%;
+        width: 100%;
+    }
+
+    #progressbar li {
+        font-size: 7px;
     }
 
     .steps .submit {
@@ -574,4 +584,10 @@ span.span_texto_registrado {
       width: 100% !important;
     }
 
+}
+
+@media (max-width:450px){
+  #progressbar li {
+    text-transform: capitalize;
+  }
 }
