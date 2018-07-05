@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 03-07-2018 a las 01:11:01
+-- Tiempo de generación: 04-07-2018 a las 05:29:46
 -- Versión del servidor: 10.1.24-MariaDB
 -- Versión de PHP: 7.1.6
 
@@ -106,6 +106,19 @@ CREATE TABLE `galeria` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `requisitos`
+--
+
+CREATE TABLE `requisitos` (
+  `id_requisitos` int(11) NOT NULL,
+  `descripcion_requisitos` text,
+  `id_empresa` int(11) NOT NULL,
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `servicios`
 --
 
@@ -150,6 +163,12 @@ ALTER TABLE `galeria`
   ADD PRIMARY KEY (`id_galeria`);
 
 --
+-- Indices de la tabla `requisitos`
+--
+ALTER TABLE `requisitos`
+  ADD PRIMARY KEY (`id_requisitos`);
+
+--
 -- Indices de la tabla `servicios`
 --
 ALTER TABLE `servicios`
@@ -179,6 +198,11 @@ ALTER TABLE `empresas`
 --
 ALTER TABLE `galeria`
   MODIFY `id_galeria` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `requisitos`
+--
+ALTER TABLE `requisitos`
+  MODIFY `id_requisitos` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `servicios`
 --
