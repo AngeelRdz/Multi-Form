@@ -15,6 +15,7 @@
     <script src="lib/jquery-1.9.0.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="src/jquery.maskedinput.js" type="text/javascript"></script>
 
+    <!-- Script de campos numéricos (solo acepta número y te muestra lo que debes capturar) -->
     <script type="text/javascript">
         $(function() {
             $.mask.definitions['~'] = "[+-]";
@@ -24,6 +25,8 @@
         });
 
     </script>
+
+    <!-- End Script de campos numéricos (solo acepta número y te muestra lo que debes capturar) -->
 
   </head>
 
@@ -54,98 +57,98 @@
               <h3 class="fs-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
               <br>
               <!-- Nombre de la empresa -->
-              <div class="hs_firstname field hs-form-field col-md-6">
-                <label for="nombre_empresa">Nombre de la empresa *</label>
+              <div class="hs_firstname field hs-form-field col-md-6 col-sm-6 col-xs-12">
+                <label for="nombre_empresa">Nombre de la empresa <span class="color_red">*</span></label>
                 <input class="form-control input-sm" id="nombre_empresa" name="nombre_empresa" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="1" data-rule-required="true" data-msg-required="Nombre de la empresa es requerido" autocomplete="off">
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
               <!-- End Nombre de la empresa -->
 
               <!-- Giro de la empresa -->
-              <div class="hs_email field hs-form-field col-md-6">
-                <label for="giro_empresa">Giro de la empresa *</label>
+              <div class="hs_email field hs-form-field col-md-6 col-sm-6 col-xs-12">
+                <label for="giro_empresa">Giro de la empresa <span class="color_red">*</span></label>
                 <input class="form-control input-sm" id="giro_empresa" name="giro_empresa" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="2" data-rule-required="true" data-msg-required="Giro de la empresa es requerido" autocomplete="off">
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
               <!-- End Giro de la empresa -->
 
               <!-- Nombre de contacto -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
-                <label for="nombre_contacto">Nombre de contacto *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6 col-sm-6 col-xs-12">
+                <label for="nombre_contacto">Nombre de contacto <span class="color_red">*</span></label>
                 <input class="form-control input-sm" id="nombre_contacto" name="nombre_contacto" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="3" data-rule-required="true" data-msg-required="Nombre es requerido" autocomplete="off">
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
               <!-- End Nombre de contacto -->
 
               <!-- Apellido de contacto -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
-                <label for="apellido_contacto">Apellido de contacto *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6 col-sm-6 col-xs-12">
+                <label for="apellido_contacto">Apellido de contacto <span class="color_red">*</span></label>
                 <input class="form-control input-sm" id="apellido_contacto" name="apellido_contacto" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="4" data-rule-required="true" data-msg-required="Apellido es requerido" autocomplete="off">
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
               <!-- End Apellido de contacto -->
 
               <!-- BTeléfono celular -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
-                <label for="celular">Teléfono celular *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6 col-sm-6 col-xs-12">
+                <label for="celular">Teléfono celular <span class="color_red">*</span></label>
                 <input class="form-control input-sm phone" id="celular" name="celular" required="required" type="text" value="" maxlength="20" placeholder="(55) 99-99-99-99" tabindex="5" data-rule-required="true" data-msg-required="Celular es requerido" autocomplete="off">
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
               <!-- End Teléfono celular -->
 
               <!-- Teléfono de oficina -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
-                <label for="tel_oficina">Teléfono de oficina *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6 col-sm-6 col-xs-12">
+                <label for="tel_oficina">Teléfono de oficina <span class="color_red">*</span></label>
                 <input id="phoneExt" class="form-control input-sm" id="tel_oficina" name="tel_oficina" required="required" type="text" value="" maxlength="40" placeholder="(99) 99-99-99-99 Ext. 9999" tabindex="6" data-rule-required="true" data-msg-required="Teléfono es requerido" autocomplete="off">
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
               <!-- End Teléfono de oficina -->
 
               <!-- Email -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
-                <label for="email">Email *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6 col-sm-6 col-xs-12">
+                <label for="email">Email <span class="color_red">*</span></label>
                 <input class="form-control input-sm" id="email" name="email" required="required" type="email" value="" maxlength="80" placeholder="" tabindex="7" data-rule-required="true" data-msg-required="Email es requerido" autocomplete="off">
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
               <!-- End Email -->
 
               <!-- Página web -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
-                <label for="pagina_web">Página web *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6 col-sm-6 col-xs-12">
+                <label for="pagina_web">Página web <span class="color_red">*</span></label>
                 <input class="form-control input-sm" id="pagina_web" name="pagina_web" required="required" type="text" value="" maxlength="100" placeholder="" tabindex="8" data-rule-required="true" data-msg-required="Página Web es requerido" autocomplete="off">
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
               <!-- End Página web -->
 
               <!-- Ciudad -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
-                <label for="ciudad">Ciudad *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6 col-sm-6 col-xs-12">
+                <label for="ciudad">Ciudad <span class="color_red">*</span></label>
                 <input class="form-control input-sm" id="ciudad" name="ciudad" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="9" data-rule-required="true" data-msg-required="Ciudad es requerido" autocomplete="off">
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
               <!-- End Ciudad -->
 
               <!-- País -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
-                <label for="pais">País *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6 col-sm-6 col-xs-12">
+                <label for="pais">País <span class="color_red">*</span></label>
                 <select class="form-control input-sm" id="pais" name="pais" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="10" data-rule-required="true" data-msg-required="País es requerido">
                   <option value="">-- Selecciona --</option>
                   <option value="Colombia">Colombia</option>
@@ -155,17 +158,17 @@
                   <option value="México">México</option>
                   <option value="Perú">Perú</option>
                 </select>
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
               <!-- End País -->
 
               <!-- Estado -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
-                <label for="estado">Estado *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6 col-sm-6 col-xs-12">
+                <label for="estado">Estado <span class="color_red">*</span></label>
                 <input class="form-control input-sm" id="estado" name="estado" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="11" data-rule-required="true" data-msg-required="Estado es requerido" autocomplete="off">
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
@@ -173,30 +176,30 @@
               <!-- End Estado -->
 
               <!-- Código postal -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
-                <label for="codigo_postal">Código Postal *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6 col-sm-6 col-xs-12">
+                <label for="codigo_postal">Código Postal <span class="color_red">*</span></label>
                 <input class="form-control input-sm" id="codigo_postal" name="codigo_postal" required="required" type="text" value="" maxlength="15" placeholder="C.P. 99999" tabindex="12" data-rule-required="true" data-msg-required="Código postal es requerido" autocomplete="off">
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
               <!-- End Código postal -->
 
               <!-- Dirección -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
-                <label for="direccion">Dirección *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12 col-sm-12 col-xs-12">
+                <label for="direccion">Dirección <span class="color_red">*</span></label>
                 <input class="form-control input-sm" id="direccion" name="direccion" required="required" type="text" value="" maxlength="120" placeholder="" tabindex="13" data-rule-required="true" data-msg-required="Dirección es requerido" autocomplete="off">
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
               <!-- End Dirección -->
 
               <!-- Acerca de mí -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
-                <label for="acerca">Acerca de mí *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12 col-sm-12 col-xs-12">
+                <label for="acerca">Acerca de mí <span class="color_red">*</span></label>
                 <textarea class="form-control" rows="5" id="acerca" name="acerca" required="required" type="text" value="" maxlength="250" placeholder="Hacer una pequeña descripción de ti, que demuestre que conoces perfectamente de este tipo de experiencias y que vas a ser el mejor anfitrión para ello..." tabindex="14" data-rule-required="true" data-msg-required="Acerca de mi es requerido"></textarea>
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
@@ -212,18 +215,18 @@
               <h2 class="fs-title">Información de la Actividad</h2>
               <h3 class="fs-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
                 <!-- Nombre de la actividad -->
-                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
-                  <label for="nombre_actividad">Nombre de la actividad *</label>
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12 col-sm-12 col-xs-12">
+                  <label for="nombre_actividad">Nombre de la actividad <span class="color_red">*</span></label>
                   <input class="form-control input-sm" id="nombre_actividad" name="nombre_actividad" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="1" data-rule-required="true" data-msg-required="Nombre de la actividad es requerido" autocomplete="off">
-                  <span class="error1" style="display: none;">
+                  <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                       <i class="error-log fa fa-exclamation-triangle"></i>
                   </span>
                 </div>
                 <!-- End Nombre de la actividad -->
 
                 <!-- Días disponibles -->
-                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
-                  <label for="dias">Días disponibles *</label><br>
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12 col-sm-12 col-xs-12">
+                  <label for="dias">Días disponibles <span class="color_red">*</span></label><br>
                     <div class="col-md-6">
                       <label class="checkbox-inline">
                         <input id="checkbox" name="dias_disponibles[]" type="checkbox" value="Lunes" required>Lunes
@@ -257,18 +260,18 @@
                 <!-- End Días disponibles -->
 
                 <!-- Horarios disponibles -->
-                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
-                  <label for="horario_disponible">Horarios disponibles *</label>
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12 col-sm-12 col-xs-12">
+                  <label for="horario_disponible">Horarios disponibles <span class="color_red">*</span></label>
                   <textarea class="form-control" rows="5" id="horario_disponible" name="horario_disponible" required="required" type="text" value="" maxlength="80" placeholder="Ingresa el horario de los días disponibles..." tabindex="2" data-rule-required="true" data-msg-required="Horario disponible es requerido"></textarea>
-                  <span class="error1" style="display: none;">
+                  <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                       <i class="error-log fa fa-exclamation-triangle"></i>
                   </span>
                 </div>
                 <!-- End Horarios disponibles -->
 
                 <!-- Tipo de actividad -->
-                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
-                  <label for="tipo_actividad">Tipo de Actividad *</label>
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6 col-sm-6 col-xs-12">
+                  <label for="tipo_actividad">Tipo de Actividad <span class="color_red">*</span></label>
                   <select class="form-control input-sm" id="tipo_actividad" name="tipo_actividad" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="3" data-rule-required="true" data-msg-required="Tipo de actividad es requerido">
                     <option value="">-- Selecciona --</option>
                     <option value="Aventura">Aventura</option>
@@ -286,47 +289,47 @@
                     <option value="Salud y bienestar">Salud y bienestar</option>
                     <option value="Experiencias con fines solidarios">Experiencias con fines solidarios</option>
                   </select>
-                  <span class="error1" style="display: none;">
+                  <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                       <i class="error-log fa fa-exclamation-triangle"></i>
                   </span>
                 </div>
                 <!-- End Tipo de actividad -->
 
                 <!-- Personas adultas -->
-                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
-                  <label for="adultas">¿Para cuántas personas adultas? *</label>
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6 col-sm-6 col-xs-12">
+                  <label for="adultas">¿Para cuántas personas adultas? <span class="color_red">*</span></label>
                   <input class="form-control input-sm" id="adultas" name="adultas" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="4" data-rule-required="true" data-msg-required="Personas adultas es requerido" autocomplete="off">
-                  <span class="error1" style="display: none;">
+                  <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                       <i class="error-log fa fa-exclamation-triangle"></i>
                   </span>
                 </div>
                 <!-- End Personas adultas -->
 
                 <!-- Niños (cuantos) -->
-                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
-                  <label for="ninos">¿Para cuántos niños? *</label>
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6 col-sm-6 col-xs-12">
+                  <label for="ninos">¿Para cuántos niños? <span class="color_red">*</span></label>
                   <input class="form-control input-sm" id="ninos" name="ninos" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="5" data-rule-required="true" data-msg-required="Cuantos niños es requerido" autocomplete="off">
-                  <span class="error1" style="display: none;">
+                  <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                       <i class="error-log fa fa-exclamation-triangle"></i>
                   </span>
                 </div>
                 <!-- End Niños (cuantos) -->
 
                 <!-- Hombres (cuantos) -->
-                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
-                  <label for="hombres">¿Para cuántos hombres? *</label>
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6 col-sm-6 col-xs-12">
+                  <label for="hombres">¿Para cuántos hombres? <span class="color_red">*</span></label>
                   <input class="form-control input-sm" id="hombres" name="hombres" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="6" data-rule-required="true" data-msg-required="Cuantos hombres es requerido" autocomplete="off">
-                  <span class="error1" style="display: none;">
+                  <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                       <i class="error-log fa fa-exclamation-triangle"></i>
                   </span>
                 </div>
                 <!-- End Hombres (cuantos) -->
 
                 <!-- Mujeres (cuantas) -->
-                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
-                  <label for="mujeres">¿Para cuántas mujeres? *</label>
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6 col-sm-6 col-xs-12">
+                  <label for="mujeres">¿Para cuántas mujeres? <span class="color_red">*</span></label>
                   <input class="form-control input-sm" id="mujeres" name="mujeres" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="7" data-rule-required="true" data-msg-required="Cuantas mujeres es requerido" autocomplete="off">
-                  <span class="error1" style="display: none;">
+                  <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                       <i class="error-log fa fa-exclamation-triangle"></i>
                   </span>
                 </div>
@@ -335,26 +338,26 @@
                 <!-- Duración de la actividad -->
                 <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
                   <div class="col-md-12">
-                    <label for="duracion">Duración de la Actividad *</label>
+                    <label for="duracion">Duración de la Actividad <span class="color_red">*</span></label>
                   </div>
-                  <div class="col-md-4">
-                    <label for="dias">Días: *</label>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <label for="dias">Días: <span class="color_red">*</span></label>
                     <input class="form-control input-sm" id="dias" name="dias" required="required" type="text" value="" maxlength="80" placeholder="Días" tabindex="8" data-rule-required="true" data-msg-required="Días es requerido" autocomplete="off">
-                    <span class="error1" style="display: none;">
+                    <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                         <i class="error-log fa fa-exclamation-triangle"></i>
                     </span>
                   </div>
-                  <div class="col-md-4">
-                    <label for="dias">Horas: *</label>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <label for="dias">Horas: <span class="color_red">*</span></label>
                     <input class="form-control input-sm" id="horas" name="horas" required="required" type="text" value="" maxlength="80" placeholder="Horas" tabindex="9" data-rule-required="true" data-msg-required="Horas es requerido" autocomplete="off">
-                    <span class="error1" style="display: none;">
+                    <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                         <i class="error-log fa fa-exclamation-triangle"></i>
                     </span>
                   </div>
-                  <div class="col-md-4">
-                    <label for="dias">Minutos:: *</label>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <label for="dias">Minutos: <span class="color_red">*</span></label>
                     <input class="form-control input-sm" id="minutos" name="minutos" required="required" type="text" value="" maxlength="80" placeholder="Minutos" tabindex="10" data-rule-required="true" data-msg-required="Minutos es requerido" autocomplete="off">
-                    <span class="error1" style="display: none;">
+                    <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                         <i class="error-log fa fa-exclamation-triangle"></i>
                     </span>
                   </div>
@@ -362,22 +365,22 @@
                 <!-- End Duración de la actividad -->
 
                 <!-- Disponible en inglés -->
-                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
-                  <label for="disponible_ingles">¿Disponible en inglés? *</label>
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6 col-sm-6 col-xs-12">
+                  <label for="disponible_ingles">¿Disponible en inglés? <span class="color_red">*</span></label>
                   <select class="form-control input-sm" id="disponible_ingles" name="disponible_ingles" required="required" type="text" value="" maxlength="80" placeholder="" tabindex="11" data-rule-required="true" data-msg-required="Disponible en inglés es requerido">
                     <option value="">-- Selecciona --</option>
                     <option value="Sí">Sí</option>
                     <option value="No">No</option>
                   </select>
-                  <span class="error1" style="display: none;">
+                  <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                       <i class="error-log fa fa-exclamation-triangle"></i>
                   </span>
                 </div>
                 <!-- End Disponible en inglés -->
 
                 <!-- Forma de pago -->
-                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6">
-                  <label for="forma_pago">Forma de pago*</label>
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-6 col-sm-6 col-xs-12">
+                  <label for="forma_pago">Forma de pago<span class="color_red">*</span></label>
                   <select class="form-control input-sm" id="forma_pago" name="forma_pago" required="required" type="text" value="" placeholder="" tabindex="12" data-rule-required="true" data-msg-required="Forma de pago es requerido">
                     <option value="">-- Selecciona --</option>
                     <option value="TC">TC</option>
@@ -386,17 +389,17 @@
                     <option value="Efectivo">Efectivo</option>
                     <option value="Otro">Otro</option>
                   </select>
-                  <span class="error1" style="display: none;">
+                  <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                       <i class="error-log fa fa-exclamation-triangle"></i>
                   </span>
                 </div>
                 <!-- End Forma de pago -->
 
                 <!-- Precio -->
-                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
-                  <label for="precio">Precio de la actividad *</label>
+                <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12 col-sm-12 col-xs-12">
+                  <label for="precio">Precio de la actividad <span class="color_red">*</span></label>
                   <textarea class="form-control" rows="5" id="precio" name="precio" required="required" type="text" value="" maxlength="80" placeholder="Describe como cobras ej. Por persona, por actividad, por recorrido, por día, etc..." tabindex="13" data-rule-required="true" data-msg-required="Precio es requerido"></textarea>
-                  <span class="error1" style="display: none;">
+                  <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                       <i class="error-log fa fa-exclamation-triangle"></i>
                   </span>
                 </div>
@@ -414,27 +417,27 @@
               <h2 class="fs-title">Descripción de la Actividad</h2>
               <h3 class="fs-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
               <!-- Descripción de la actividad -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
-                <label for="descripcion_experiencia">Descripción de la experiencia *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12 col-sm-12 col-xs-12">
+                <label for="descripcion_experiencia">Descripción de la experiencia <span class="color_red">*</span></label>
                 <textarea class="form-control" rows="5" id="descripcion_experiencia" name="descripcion_experiencia" required="required" type="text" value="" maxlength="250" placeholder="Describe perfectamente la experiencia..." tabindex="1" data-rule-required="true" data-msg-required="Experiencia es requerido"></textarea>
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
               <!-- End Descripción de la actividad  -->
 
               <!-- A que otros servicios -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
-                <label for="servicios_acceso">¿A que otros servicios tienen acceso los contratantes? </label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12 col-sm-12 col-xs-12">
+                <label for="servicios_acceso">¿A qué otros servicios tienen acceso los contratantes? </label>
                 <textarea class="form-control" rows="5" id="servicios_acceso" name="servicios_acceso" type="text" value="" maxlength="250" placeholder="Opcional..." tabindex="2"></textarea>
               </div>
               <!-- End A que otros servicios -->
 
               <!-- Acerca del lugar -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
-                <label for="acerca_lugar">Acerca del lugar *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12 col-sm-12 col-xs-12">
+                <label for="acerca_lugar">Acerca del lugar <span class="color_red">*</span></label>
                 <textarea class="form-control" rows="5" id="acerca_lugar" name="acerca_lugar" required="required" type="text" value="" maxlength="250" placeholder="Describe el lugar donde se desarrolla la actividad, ejemplo, Zona de pantanos, zona montañosa, zona urbana con mucho tráfico, zona para caminar, etc...." tabindex="3" data-rule-required="true" data-msg-required="Descripción del lugar es requerido"></textarea>
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
@@ -452,8 +455,8 @@
               <h2 class="fs-title">Servicios que incluye</h2>
               <h3 class="fs-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
               <!-- Servicios -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
-                <label for="dias">Servicios *</label><br>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12 col-sm-12 col-xs-12">
+                <label for="dias">Servicios <span class="color_red">*</span></label><br>
                   <div class="col-md-6">
                     <label class="checkbox-inline">
                       <input id="checkbox2" name="servicios[]" type="checkbox" value="Accesorios" required>Accesorios
@@ -506,50 +509,50 @@
               <!-- End Servicios -->
 
               <!-- ¿Qué inclue el servicio? -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
-                <label for="incluye_servicio">¿Qué incluye el servicio? *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12 col-sm-12 col-xs-12">
+                <label for="incluye_servicio">¿Qué incluye el servicio? <span class="color_red">*</span></label>
                 <textarea class="form-control" rows="5" id="incluye_servicio" name="incluye_servicio" required="required" type="text" value="" maxlength="250" placeholder="Hacer una descripción de todo lo que incluye la experiencia para que las personas tengan un idea completa de lo que van a recibir por el precio -Es un complemento  al listado que incluye..." tabindex="1" data-rule-required="true" data-msg-required="Servicio es requerido"></textarea>
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
               <!-- End ¿Qué inclue el servicio? -->
 
               <!-- ¿Qué hacer durante la experiencia? -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
-                <label for="durante_experiencia">¿Qué haremos durante la experiencia? *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12 col-sm-12 col-xs-12">
+                <label for="durante_experiencia">¿Qué haremos durante la experiencia? <span class="color_red">*</span></label>
                 <textarea class="form-control" rows="5" id="durante_experiencia" name="durante_experiencia" required="required" type="text" value="" maxlength="250" placeholder="Hacer una descripción completa del servicio que vas a prestar para que las personas tengan una idea completa de lo que van a recibir y no tener sorpresas..." tabindex="2" data-rule-required="true" data-msg-required="Experiencia es requerido"></textarea>
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
               <!-- End ¿Qué hacer durante la experiencia? -->
 
               <!-- ¿Quién puede apuntarse? -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
-                <label for="apuntarse">¿Quién puede apuntarse? *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12 col-sm-12 col-xs-12">
+                <label for="apuntarse">¿Quién puede apuntarse? <span class="color_red">*</span></label>
                 <textarea class="form-control" rows="5" id="apuntarse" name="apuntarse" required="required" type="text" value="" maxlength="250" placeholder="Hacer una descripción completa del tipo de personas que pueden inscribirse para participar en la experiencia turística, ser muy explícito en las características que deben tener las personas para que no hayan sorpresas..." tabindex="3" data-rule-required="true" data-msg-required="Quienes es requerido"></textarea>
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
               <!-- End ¿Quién puede apuntarse? -->
 
               <!-- Notas adicionales -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
-                <label for="notas_adicionales">Notas adicionales *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12 col-sm-12 col-xs-12">
+                <label for="notas_adicionales">Notas adicionales <span class="color_red">*</span></label>
                 <textarea class="form-control" rows="5" id="notas_adicionales" name="notas_adicionales" required="required" type="text" value="" maxlength="250" placeholder="Si necesitas especificar algo adicional aquí lo puedes hacer" tabindex="4" data-rule-required="true" data-msg-required="Notas es requerido"></textarea>
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
               <!-- End Notas adicionales -->
 
               <!-- Política de cancelación -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
-                <label for="politica">Política de cancelación *</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12 col-sm-12 col-xs-12">
+                <label for="politica">Política de cancelación <span class="color_red">*</span></label>
                 <textarea class="form-control" rows="5" id="politica" name="politica" required="required" type="text" value="" maxlength="250" placeholder="Escribe la política de cancelación" tabindex="5" data-rule-required="true" data-msg-required="Política es requerido"></textarea>
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
               </div>
@@ -567,10 +570,10 @@
               <h2 class="fs-title">Fotos de la Actividad</h2>
               <h3 class="fs-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
               <!-- Subir imágenes -->
-              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12">
-                <label for="files">Sube tus fotos</label>
+              <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database col-md-12 col-sm-12 col-xs-12">
+                <label for="files">Sube tus fotos <span class="color_red">*</span></label>
                 <input type="file" id="files" class="form-control" name="files[]" multiple required data-rule-required="true" data-msg-required="Fotos es requerido">
-                <span class="error1" style="display: none;">
+                <span id="error_mensaje" class="error1 animated bounceInLeft" style="display: none;">
                     <i class="error-log fa fa-exclamation-triangle"></i>
                 </span>
                 <!-- <div id="drop_zone"><br><center>Soltar archivo aquí</center></div><br> -->
@@ -592,11 +595,17 @@
       </div>
     </div>
 
+    <!-- Script para el preoloader de la página -->
+
     <script>
       $(window).load(function(){
           $('#page-loader').fadeOut(1000);
       });
     </script>
+
+    <!-- End Script para el preoloader de la página -->
+
+    <!-- Script para el mensaje de error cuando dejas vacios los checkbox del formulario de días disponibles -->
 
     <script type="text/javascript">
       $(document).ready(function () {
@@ -606,14 +615,41 @@
             if(!checked) {
               // alert("Debe verificar al menos un checkbox.");
               var span_check = document.createElement('span');
-              span_check.innerHTML = ['<div class="col-md-12"><span class="error1"><i class="error-log fa fa-exclamation-triangle"></i>&nbsp;&nbsp;Debe verificar al menos un checkbox de días.</span></div>'];
-              document.getElementById('msg_error').insertBefore(span_check, null);
-              return false;
+                span_check.innerHTML = ['<div class="col-md-12"><span id="error1" class="error1 animated bounceInLeft"><i class="error-log fa fa-exclamation-triangle"></i>&nbsp;&nbsp;Debe verificar al menos un checkbox de días.</span></div>'];
+                document.getElementById('msg_error').insertBefore(span_check, null);
+                return false;
             }
-
           });
       });
+
+      //Script que hace la animación (la quita y la pone), dependiendo si quita el checked o lo deja en unchecked del formulario de días disponibles
+
+      $(document).ready(function() {
+          $('input[type="checkbox"]').on('change', function(e){
+              if (this.checked) {
+                  console.log('Checkbox ' + $(e.currentTarget).val() + ' checked');
+                  $('#error1').removeClass('bounceInLeft');
+                  $('#error1').addClass('bounceOutLeft');
+
+                  timercito = setTimeout(function(){
+                    $('#error1').css("display", "none");
+                  }, 500);
+              } else {
+                  console.log('Checkbox ' + $(e.currentTarget).val() + ' unchecked');
+                  timercito = setTimeout(function(){
+                    $('#error1').removeClass('bounceOutLeft');
+                    $('#error1').addClass('bounceInLeft');
+                    $('#error1').css("display", "block");
+                  }, 500);
+              }
+          });
+      });
+
     </script>
+
+    <!-- End Script para el mensaje de error cuando dejas vacios los checkbox del formulario de días disponibles -->
+
+    <!-- Script para el mensaje de error cuando dejas vacios los checkbox del formulario de servicios -->
 
     <script type="text/javascript">
       $(document).ready(function () {
@@ -623,16 +659,40 @@
             if(!checked2) {
               // alert("Debe verificar al menos un checkbox.");
               var span_check2 = document.createElement('span');
-              span_check2.innerHTML = ['<div class="col-md-12"><span class="error1"><i class="error-log fa fa-exclamation-triangle"></i>&nbsp;&nbsp;Debe verificar al menos un checkbox de servicios.</span></div>'];
+              span_check2.innerHTML = ['<div class="col-md-12"><span id="error2" class="error1 animated bounceInLeft"><i class="error-log fa fa-exclamation-triangle"></i>&nbsp;&nbsp;Debe verificar al menos un checkbox de servicios.</span></div>'];
               document.getElementById('msg_error2').insertBefore(span_check2, null);
               return false;
             }
+          });
+      });
 
+      //Script que hace la animación (la quita y la pone), dependiendo si quita el checked o lo deja en unchecked del formulario de servicios
+
+      $(document).ready(function() {
+          $('input[type="checkbox"]').on('change', function(e){
+              if (this.checked) {
+                  console.log('Checkbox ' + $(e.currentTarget).val() + ' checked');
+                  $('#error2').removeClass('bounceInLeft');
+                  $('#error2').addClass('bounceOutLeft');
+
+                  timercito = setTimeout(function(){
+                    $('#error2').css("display", "none");
+                  }, 500);
+              } else {
+                  console.log('Checkbox ' + $(e.currentTarget).val() + ' unchecked');
+                  timercito = setTimeout(function(){
+                    $('#error2').removeClass('bounceOutLeft');
+                    $('#error2').addClass('bounceInLeft');
+                    $('#error2').css("display", "block");
+                  }, 500);
+              }
           });
       });
     </script>
 
+    <!-- End Script para el mensaje de error cuando dejas vacios los checkbox del formulario de servicios -->
 
+    <!-- Script para la galería de fotos (Array) te muestra un preview de las imágenes subidas -->
 
     <script>
       function handleFileSelect(evt) {
@@ -653,7 +713,7 @@
             return function(e) {
               // Render thumbnail.
               var span = document.createElement('span');
-              span.innerHTML = ['<div class="col-md-3"><img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/><br><p class="texto_galeria">Nombre: <span class="sub_texto_galeria">', escape(theFile.name), '</span></p><p class="texto_galeria">Tamaño: <span class="sub_texto_galeria">', escape(theFile.size), ' bytes </span></p><p class="texto_galeria">Tipo: <span class="sub_texto_galeria">', escape(theFile.type), '</span></p><br><br></div>'].join('');
+              span.innerHTML = ['<div class="col-md-3 col-sm-3 col-xs-12"><center><img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/><br><p class="texto_galeria">Nombre: <span class="sub_texto_galeria">', escape(theFile.name), '</span></p><p class="texto_galeria">Tamaño: <span class="sub_texto_galeria">', escape(theFile.size), ' bytes </span></p><p class="texto_galeria">Tipo: <span class="sub_texto_galeria">', escape(theFile.type), '</span></p><br><br></center></div>'].join('');
               document.getElementById('list-miniatura').insertBefore(span, null);
             };
           })(f);
@@ -666,16 +726,16 @@
       document.getElementById('files').addEventListener('change', handleFileSelect, false);
     </script>
 
+    <!-- End Script para la galería de fotos (Array) te muestra un preview de las imágenes subidas -->
+
     <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
     <script src='https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js'></script>
 
-    <script  src="js/index.js"></script>
+    <script src="js/index.js"></script>
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
 
 
   </body>

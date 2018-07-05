@@ -1,4 +1,4 @@
-/* 
+/*
 * Plug-ins: jQuery Validate, jQuery
 * Easing
 */
