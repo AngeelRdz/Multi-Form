@@ -125,7 +125,7 @@ input:not([type=submit]):not([type=file]):not([type=checkbox]):not([type=radio])
 
 /* Buttons */
 .steps .action-button, .action-button {
-  width: 100px !important;
+  width: 120px !important;
   background: #1650e3!important;
   font-weight: bold;
   color: white;
@@ -321,19 +321,24 @@ span.sub_texto_galeria {
 /* Seccion de registro */
 
 h1.titulo {
-    text-align: center;
-    color: #8d8f94;
+    text-align: left;
+    color: #000;
 }
 
 hr.hr_style {
-    border-top: 2px solid #1650e3;
+    border-top: 1px solid #1650e3;
     width: 100%;
+}
+
+hr.hr_style_title{
+    border-top: 2px solid #1650e3;
+    width: 10%;
 }
 
 h3.subtitulo_secciones {
     font-weight: bold;
-    font-size: 13px;
-    color: #837E7E;
+    font-size: 16px;
+    color: #000;
     margin-bottom: 30px;
     text-align: center;
     text-transform: uppercase;
@@ -348,7 +353,7 @@ p.titulo_label {
 
 span.span_texto_registrado {
     font-size: 14px;
-    color: #170a77;
+    color: #1650e3;
     font-weight: 400;
 }
 
@@ -378,11 +383,12 @@ span.span_texto_registrado {
 }
 
 .caja_bien {
-    background-color: #1650e3;
+    background-color: transparent;
     padding: 10px;
-    color: #fff;
+    color: #1650e3;
     font-weight: 400;
     border-radius: 4px;
+    border: 1px solid #1650e3;
 }
 
 .caja_error {
@@ -432,7 +438,7 @@ span.span_texto_registrado {
     bottom: 5px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #ffffff;
+    border-top-color: #dc0c0c;
     -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 }

@@ -90,6 +90,9 @@
                   echo  "
                         <div class='container'>
                           <h3 class='subtitulo_secciones'>Información personal/empresa</h3>
+                          <center>
+                            <hr class='hr_style_title'><br>
+                          </center>
                           <div class='col-md-12'>
                             <p class='titulo_label col-md-4'>Nombre de la empresa: <span class='span_texto_registrado'> $nombre_empresa </span></p>
                             <p class='titulo_label col-md-4'>Giro de la empresa: <span class='span_texto_registrado'> $giro_empresa </span></p>
@@ -111,13 +114,13 @@
                             if (!$sql) {
                               echo "
                                     <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
-                                      <h5 class='caja_error'><i class='fa fa-close' style='color:white'></i>&nbsp;&nbsp;Lo sentimos, no se pudo registrar la empresa $nombre_empresa.</h5>
+                                      <h5 class='caja_error'><i class='fa fa-close' style='color:#1650e3'></i>&nbsp;&nbsp;Lo sentimos, no se pudo registrar la empresa $nombre_empresa.</h5>
                                     </div>
                               ";
                             }else {
                               echo "
                                     <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
-                                      <h5 class='caja_bien'><i class='fa fa-check' style='color:white'></i>&nbsp;&nbsp;Registro de la empresa $nombre_empresa exitosamente.</h5>
+                                      <h5 class='caja_bien'><i class='fa fa-check' style='color:#1650e3'></i>&nbsp;&nbsp;Registro de la empresa $nombre_empresa exitosamente.</h5>
                                     </div>
                               ";
                             }
@@ -154,7 +157,10 @@
 
                   echo "
                   			<div class='container'>
-                					<h3 class='subtitulo_secciones'>Información de la actividad</h3>
+                          <h3 class='subtitulo_secciones'>Información de la actividad</h3>
+                          <center>
+                            <hr class='hr_style_title'><br>
+                          </center>
                           <div class='col-md-12'>
                   					<p class='titulo_label col-md-4'>Nombre de la actividad: <span class='span_texto_registrado'> $nombre_actividad </span></p>
                   					<p class='titulo_label col-md-4'>Días disponibles: <span class='span_texto_registrado'> $sql_valores </span></p>
@@ -176,13 +182,13 @@
                   					if (!$sql_actividades) {
                               echo "
                                     <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
-                                      <h5 class='caja_error'><i class='fa fa-close' style='color:white'></i>&nbsp;&nbsp;Lo sentimos, no se pudo registrar la actividad $nombre_actividad.</h5>
+                                      <h5 class='caja_error'><i class='fa fa-close' style='color:#1650e3'></i>&nbsp;&nbsp;Lo sentimos, no se pudo registrar la actividad $nombre_actividad.</h5>
                                     </div>
                               ";
                   					}else {
                   						echo "
                                     <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
-                                      <h5 class='caja_bien'><i class='fa fa-check' style='color:white'></i>&nbsp;&nbsp;Registro de la actividad $nombre_actividad exitosamente.</h5>
+                                      <h5 class='caja_bien'><i class='fa fa-check' style='color:#1650e3'></i>&nbsp;&nbsp;Registro de la actividad $nombre_actividad exitosamente.</h5>
                                     </div>
                               ";
                   					}
@@ -205,6 +211,9 @@
                   echo "
                         <div class='container'>
                           <h3 class='subtitulo_secciones'>Descripción de la actividad</h3>
+                          <center>
+                            <hr class='hr_style_title'><br>
+                          </center>
                           <div class='col-md-12'>
                             <p class='titulo_label col-md-4'>Descripción de la experiencia: <span class='span_texto_registrado'> $descripcion_experiencia </span></p>
                             <p class='titulo_label col-md-4'>¿A que otros servicios tienen acceso los contratantes?: <span class='span_texto_registrado'> $servicios_acceso </span></p>
@@ -215,13 +224,13 @@
                             if (!$sql_descripcion_actividades) {
                               echo "
                                     <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
-                                      <h5 class='caja_error'><i class='fa fa-close' style='color:white'></i>&nbsp;&nbsp;Lo sentimos, no se pudo registrar la descripción de la actividad.</h5>
+                                      <h5 class='caja_error'><i class='fa fa-close' style='color:#1650e3'></i>&nbsp;&nbsp;Lo sentimos, no se pudo registrar la descripción de la actividad.</h5>
                                     </div>
                               ";
                             }else {
                               echo "
                                     <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
-                                      <h5 class='caja_bien'><i class='fa fa-check' style='color:white'></i>&nbsp;&nbsp;Registro de descripción de la actividad exitosamente.</h5>
+                                      <h5 class='caja_bien'><i class='fa fa-check' style='color:#1650e3'></i>&nbsp;&nbsp;Registro de descripción de la actividad exitosamente.</h5>
                                     </div>
                               ";
                             }
@@ -253,6 +262,9 @@
                   echo "
                         <div class='container'>
                             <h3 class='subtitulo_secciones'>Servicios que incluye</h3>
+                            <center>
+                              <hr class='hr_style_title'><br>
+                            </center>
                             <div class='col-md-12'>
                               <p class='titulo_label col-md-4'>Servicios: <span class='span_texto_registrado'> $sql_servicios_seleccionados </span></p>
                               <p class='titulo_label col-md-4'>¿Qué incluye el servicio?: <span class='span_texto_registrado'> $incluye_servicio </span></p>
@@ -266,13 +278,13 @@
                             if (!$sql_servicios) {
                               echo "
                                     <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
-                                      <h5 class='caja_error'><i class='fa fa-close' style='color:white'></i>&nbsp;&nbsp;Lo sentimos, no se pudo registrar servicio (s).</h5>
+                                      <h5 class='caja_error'><i class='fa fa-close' style='color:#1650e3'></i>&nbsp;&nbsp;Lo sentimos, no se pudo registrar servicio (s).</h5>
                                     </div>
                               ";
                             }else {
                               echo "
                                     <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
-                                      <h5 class='caja_bien'><i class='fa fa-check' style='color:white'></i>&nbsp;&nbsp;Registro de servicio (s) exitosamente.</h5>
+                                      <h5 class='caja_bien'><i class='fa fa-check' style='color:#1650e3'></i>&nbsp;&nbsp;Registro de servicio (s) exitosamente.</h5>
                                     </div>
                               ";
                             }
@@ -283,8 +295,51 @@
                         ";
                   }
 
+                  if (isset($_POST['descripcion_experiencia'])) {
+
+                  $sql_requisitos = "INSERT INTO requisitos (`descripcion_requisitos`, `id_empresa`)
+                          VALUES ('" . $requisitos . "', '" .$id_registro. "')";
+
+                  $resultados_descripcion_actividades = $conection->query($sql_requisitos);
+                  //echo $sql_requisitos;
+
+                  echo "
+                        <div class='container'>
+                          <h3 class='subtitulo_secciones'>Requisitos</h3>
+                          <center>
+                            <hr class='hr_style_title'><br>
+                          </center>
+                          <div class='col-md-12'>
+                            <p class='titulo_label col-md-12'>Descripción de la experiencia: <span class='span_texto_registrado'> $requisitos </span></p>
+                          </div>
+                      ";
+
+                            if (!$sql_requisitos) {
+                              echo "
+                                    <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
+                                      <h5 class='caja_error'><i class='fa fa-close' style='color:#1650e3'></i>&nbsp;&nbsp;Lo sentimos, no se pudieron registrar los requisitos.</h5>
+                                    </div>
+                              ";
+                            }else {
+                              echo "
+                                    <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
+                                      <h5 class='caja_bien'><i class='fa fa-check' style='color:#1650e3'></i>&nbsp;&nbsp;Registro de requisitos exitosamente.</h5>
+                                    </div>
+                              ";
+                            }
+
+                  echo "
+                        </div>
+                        <hr class='hr_style'><br>
+                      ";
+
+                  }
+
                   echo "<div class='container'>
                           <h3 class='subtitulo_secciones'>Galería</h3>
+                          <center>
+                            <hr class='hr_style_title'><br>
+                          </center>
                           <br>";
 
                   if (isset($_FILES['files']) && isset($_POST['nombre_empresa'])) {
@@ -322,13 +377,13 @@
                   if (!$sql_galeria) {
                     echo "
                           <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
-                            <h5 class='caja_error'><i class='fa fa-close' style='color:white'></i>&nbsp;&nbsp;Lo sentimos, no se pudo registrar la  $nombreImagen.</h5>
+                            <h5 class='caja_error'><i class='fa fa-close' style='color:#1650e3'></i>&nbsp;&nbsp;Lo sentimos, no se pudo registrar la  $nombreImagen.</h5>
                           </div>
                     ";
                   }else {
                     echo "
                           <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
-                            <h5 class='caja_bien'><i class='fa fa-check' style='color:white'></i>&nbsp;&nbsp;Registro de $nombreImagen exitosamente.</h5>
+                            <h5 class='caja_bien'><i class='fa fa-check' style='color:#1650e3'></i>&nbsp;&nbsp;Registro de $nombreImagen exitosamente.</h5>
                           </div>
                     ";
                   }
@@ -339,47 +394,10 @@
                     ";
                   }
 
-                  if (isset($_POST['descripcion_experiencia'])) {
-
-                  $sql_requisitos = "INSERT INTO requisitos (`descripcion_requisitos`, `id_empresa`)
-                          VALUES ('" . $requisitos . "', '" .$id_registro. "')";
-
-                  $resultados_descripcion_actividades = $conection->query($sql_requisitos);
-                  //echo $sql_requisitos;
-
-                  echo "
-                        <div class='container'>
-                          <h3 class='subtitulo_secciones'>Requisitos</h3>
-                          <div class='col-md-12'>
-                            <p class='titulo_label col-md-12'>Descripción de la experiencia: <span class='span_texto_registrado'> $requisitos </span></p>
-                          </div>
-                      ";
-
-                            if (!$sql_requisitos) {
-                              echo "
-                                    <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
-                                      <h5 class='caja_error'><i class='fa fa-close' style='color:white'></i>&nbsp;&nbsp;Lo sentimos, no se pudieron registrar los requisitos.</h5>
-                                    </div>
-                              ";
-                            }else {
-                              echo "
-                                    <div class='col-md-12 col-sm-12 col-xs-12 contenido_exito'>
-                                      <h5 class='caja_bien'><i class='fa fa-check' style='color:white'></i>&nbsp;&nbsp;Registro de requisitos exitosamente.</h5>
-                                    </div>
-                              ";
-                            }
-
-                  echo "
-                        </div>
-                        <hr class='hr_style'><br>
-                      ";
-
-                  }
-
                   echo "
                         <div class='container'>
                           <center>
-                            <a href='index.html' class='btn next action-button btn-success' role='button' aria-pressed='true'>OK</a>
+                            <a href='index.html' class='btn next action-button btn-success' role='button' aria-pressed='true'>Nuevo registro</a>
                           </center>
                         </div>
                         <br><br>
